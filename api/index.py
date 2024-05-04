@@ -53,6 +53,16 @@ async def get_detail():
 @app.delete("/api/logout")
 async def delete_account():
     removeAccount()
+    
+@app.get("/api/getDetails")
+async def get_details():
+    return JSONResponse(
+        content={
+            "message": "Successfully added Report and Summary",
+            "data": None,
+            "success": True,
+        }
+    )
 
 @app.post("/api/getImages")
 async def get_images(req: Dict[str, str]):
