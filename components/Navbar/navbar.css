@@ -1,0 +1,9 @@
+.loading{
+    /* background-image: url(/public/final_loading.gif); */
+    /* background-color: aqua !important; */
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  
+  }
