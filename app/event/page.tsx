@@ -44,7 +44,7 @@ function NewEventContent() {
 
   return (
     <>
-      {data?.Events ? (
+      {/* {data?.Events ? (
         <>
           <Navbar options={["Home", "About", "Event", "Gallery"]} />
           <div className="mt-44">
@@ -65,7 +65,7 @@ function NewEventContent() {
         </>
       ) : (
         <div>loading</div>
-      )}
+      )} */}
     </>
   );
 }
