@@ -1,7 +1,7 @@
 import Image from "next/image";
 import "./navbar.css";
 import loading from "@/components/Navbar/final_loading_gif.gif";
-l_loading.gif"
+
 
 export default function Loading() {
   return (
