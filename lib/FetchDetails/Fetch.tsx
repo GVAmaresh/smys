@@ -28,7 +28,7 @@ export const FetchDetails = async (): Promise<any> => {
 
 export const DownloadPhoto = async (): Promise<any> => {
   try {
-    const response = await fetch("/api/photo", {
+    const response = await fetch(`${URL}/photo`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -52,7 +52,7 @@ export const GetImages = async (url: string): Promise<any> => {
 
 
 
-    const response = await fetch("/api/getImages", {
+    const response = await fetch(`${URL}/getImages`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
