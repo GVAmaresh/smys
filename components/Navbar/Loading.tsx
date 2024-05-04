@@ -1,9 +1,7 @@
 import Image from "next/image";
 import "./navbar.css";
 import loading from "@/components/Navbar/final_loading_gif.gif";
-// import loading from "/videos/final_loading.mp4";
-// import final_loading from "./final_loading_gif.gif"
-// import newLoading from "/public/final_loading.gif"
+l_loading.gif"
 
 export default function Loading() {
   return (

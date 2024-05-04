@@ -15,8 +15,7 @@ import { FiAlignLeft } from "react-icons/fi";
 import Link from "next/link";
 import Image from "next/image";
 
-// const pages = ["About", "Events", "Gallery" ];
-// const pages = { About: "/about", Events: "/events", Gallery: "/gallery" };
+
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function Navbar({ options }: { options: Array<string> }) {

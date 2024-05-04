@@ -12,8 +12,8 @@ export default function SatpanthaCard(data: SatpantaMember) {
         <CardContent>
         <div className=" font-extrabold text-xs  md:text-lg md:text-center">{data.name}</div>
           <div className="  font-medium text-xs  md:text-xs  md:text-center mt-2 mb-2">{data.position}</div>
-          <div className="font-medium text-xs  md:text-xs  md:text-center mt-2 mb-2">{data.email} | {data.phone}</div>
-          <div className="font-medium text-slate-500  text-xs  ">{data.description}</div>
+          {/* <div className="font-medium text-xs  md:text-xs  md:text-center mt-2 mb-2">{data.email} | {data.phone}</div> */}
+          {/* <div className="font-medium text-slate-500  text-xs  ">{data.description}</div> */}
 
         </CardContent>
       </CardActionArea>

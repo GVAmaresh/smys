@@ -2,6 +2,7 @@
 // https://drive.google.com/thumbnail?id=1mdfv4yNA8EtTf3ZAniCGMFdDy6c3vmc5&sz=w1000
 
 export const ImageConvert = (url: string) => {
+  if (!url) return "" 
   let file_id = url;
   if (url.includes("https")) {
     let parts = url.split("/");

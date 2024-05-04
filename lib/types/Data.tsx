@@ -1,26 +1,26 @@
 export interface CommitteeMember {
-  name: string;
-  age: string;
-  position: string;
-  photo: string;
-  description: string;
-  gender: string;
-  email: string;
-  phone: string;
+  name?: string;
+  age?: string;
+  position?: string;
+  photo?: string;
+  description?: string;
+  gender?: string;
+  email?: string;
+  phone?: string;
 }
 export interface Journey {
   photo: string;
   description: string;
 }
 export interface Founder {
-  name: string;
-  age: string;
-  photo: string;
-  gender: string;
-  position: string;
-  email: string;
-  phone: string;
-  description:string;
+  name?: string;
+  age?: string;
+  photo?: string;
+  gender?: string;
+  position?: string;
+  email?: string;
+  phone?: string;
+  description?:string;
 }
 
 interface JyanaEvent {
@@ -36,12 +36,12 @@ interface Event {
 }
 
 export interface SatpantaMember {
-  name: string;
-  position: string;
-  study: string;
-  description:string;
-  email:string
-  phone:string
+  name?: string;
+  position?: string;
+  study?: string;
+  description?:string;
+  email?:string
+  phone?:string
 }
 
 

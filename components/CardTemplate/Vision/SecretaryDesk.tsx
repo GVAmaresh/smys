@@ -7,7 +7,7 @@ import Typography from "@mui/material/Typography";
 import { CardMedia } from "@mui/material";
 import { ImageConvert } from "@/lib/smys_details/Image_Conversion";
 import Heading from "../Font/Heading";
-// import PathTemplate from "./PathTemplate";
+
 import { Journey } from "@/lib/types/Data";
 
 interface FounderMemberProp {
@@ -64,7 +64,7 @@ export default function SecretaryVision({ data }: { data: Journey }) {
             <SecretaryTemplate
               name={""}
               image={ImageConvert(data.photo)}
-              description={data.description}
+              description={"ಒಂದು ಸಂಸ್ಥೆ ಸಾರ್ಥಕ ಸೇವೆಯನ್ನು ಸಲ್ಲಿಸುತ್ತಾ ಸುಮಾರು 75 ವರ್ಷಗಳನ್ನು ಮೀರಿದೆಯೆಂದರೆ ನಿಜಕ್ಕೂ ಅದು ಭಗವತ್ ಅನುಗ್ರಹದ ನಿಜ ರೂಪವೇ ಸರಿ. ಶ್ರೀ ಮಾಧ್ಯ ಯುವಕ ಸಂಘ ವಿದ್ಯಾರ್ಥಿ ನಿಲಯ ಕೇವಲ ವಸತಿ ನಿಲಯವಷ್ಟೇ ಅಲ್ಲದೆ, ಉತ್ತಮ ಸಂಸ್ಕೃತಿ, ಸಂಸ್ಕಾರ ಸ್ವಾವಲಂಬನೆಯನ್ನು ವಿದ್ಯಾರ್ಥಿಗಳಲ್ಲಿ ಪ್ರಚೋದಿಸುವ  ಮಾದರಿ ಸಂಸ್ಥೆ ಅಷ್ಟೇ ಅಲ್ಲದೆ ಆದರ್ಶಪ್ರಾಯವಾಗಿದೆ. ಹಲವಾರು ಜನ ಮಹನೀಯರ, ವಿದ್ಯಾರ್ಥಿಗಳ, ಸಿಬ್ಬಂದಿ ವರ್ಗ, ದಾನಿಗಳ ಹಾಗೂ ದಕ್ಷ ಕಾರ್ಯಕಾರಿ ಸಮಿತಿಯ ಪರಿಶ್ರಮದಿಂದ ಇಂದು ನಮ್ಮ ವಿದ್ಯಾರ್ಥಿ ನಿಲಯ ಬೆಂಗಳೂರಿಗೆ ವ್ಯಾಸಂಗಕ್ಕಾಗಿ ಬರುವ ಬ್ರಾಹ್ಮಣ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಬಹು ಬೇಡಿಕೆ ಹಾಗೂ ಪ್ರಥಮ ಆಯ್ಕೆಯಾಗಿದೆ. ಇಂತಹ ಪವಿತ್ರ ಸಂಘದಲ್ಲಿ ಕಾರ್ಯದರ್ಶಿಯಾಗಿ ಸೇವೆ ಸಲ್ಲಿಸಲು ಹರಿ ವಾಯು ಗುರುಗಳ ಆಶೀರ್ವಾದ ನನ್ನ ಮೇಲಿರುವುದು ಸ್ಪಷ್ಟವಾಗಿದೆ. ಮುಂದಿನ ದಿನಗಳಲ್ಲಿ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಇನ್ನು ಹೆಚ್ಚು ಕಾರ್ಯಕ್ರಮ, ಯೋಜನೆ ಹಾಗೂ ಸೇವೆ ಸಲ್ಲಿಸಲು ಉತ್ಸುಕಾನ್ನಾಗಿದ್ದೇನೆ. ನಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳು ನಮ್ಮ ಶಕ್ತಿ ಹಾಗೂ ಹೆಮ್ಮೆ"}
             />
           </div>
         </div>

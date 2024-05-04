@@ -5,14 +5,14 @@ import FounderMember from "./FounderMember";
 import { ImageConvert } from "@/lib/smys_details/Image_Conversion";
 
 interface Founder {
-  name: string;
-  age: string;
-  photo: string;
-  gender: string;
-  position: string;
-  email: string;
-  phone: string;
-  description: string;
+  name?: string;
+  age?: string;
+  photo?: string;
+  gender?: string;
+  position?: string;
+  email?: string;
+  phone?: string;
+  description?: string;
 }
 
 interface FounderProps {
@@ -25,82 +25,57 @@ export default function Founder({ founders }: FounderProps) {
   }
   console.log(founders);
   return (
-    // <div className="mt-28">
-    //   <Heading text={"Founders"} />
-    //   <div className="flex flex-col items-center mt-6 mb-20">
-    //   {Object.values(founders).map((founder, index) => (
-    //       <CommitteMember
-    //         key={index}
-    //         name={founder.name}
-    //         photo={ImageConvert(founder.photo)}
-    //         phone={founder.phone}
-    //         email={founder.email}
-    //         description={founder.description}
 
-    //         name={committe.name}
-    //         photo={ImageConvert(committe.photo)}
-    //         age={""}
-    //         position={""}
-    //         gender={committe.gender}
-    //         email={committe.email}
-    //         phone={committe.phone}
-    //         description={committe.description}
-    //       />
-    //     ))}
-
-    //   </div>
-    // </div>
     <>
       <div className="container mt-20 ">
         <Heading text="Founders" />
-        <div className="m-10 md:m-64 md:mt-10 md:mb-10 p-10 mt-10 mb-10 border-2" style={{borderBottomRightRadius:"50px", borderTopLeftRadius:"50px"}}>
-          As the founder of [Company Name], my journey began with a simple
-          vision: to make a difference. Fueled by passion and determination, I
-          embarked on this entrepreneurial voyage, driven by the desire to
-          innovate and solve pressing challenges. Our company is not just about
-          products or services; it's about impact. From the inception, our
-          mission has been to revolutionize the way people [describe your
-          company's mission]. We strive to empower individuals, businesses, and
-          communities, fostering growth and prosperity. Throughout this journey,
-          I've learned invaluable lessons  from overcoming obstacles to
-          embracing failures as opportunities for growth. Each setback
-          strengthened my resolve and fueled my commitment to our vision. Today,
-          as we stand at the forefront of innovation, I am proud of what we've
-          achieved. Yet, our journey is far from over. We remain steadfast in
-          our dedication to pushing boundaries, disrupting industries, and
-          leaving a lasting legacy. But, beyond the numbers and milestones lies
-          a deeper purpose  to inspire change, to create a better tomorrow.
-          Together, we are not just building a company; we are shaping a future
-          filled with endless possibilities. Join us as we continue to redefine
-          what's possible and make our mark on the world.
-        </div>
-        <Grid
-          sx={{ flexGrow: 1 }}
-          container
-          spacing={2}
-          justifyContent="center"
-          marginTop={5}
+        <div
+          className="m-10 md:m-64 md:mt-10 md:mb-10 p-10 mt-10 mb-10 border-2"
+          style={{
+            borderBottomRightRadius: "50px",
+            borderTopLeftRadius: "50px",
+          }}
         >
-          <Grid item xs={10}>
-            <Grid container justifyContent="center" spacing={4}>
-              {founders &&
-                Object.values(founders).map((founder, index) => (
-                  <Grid key={index} item xs={6} sm={3}>
-                    <FounderMember
-                      name={founder.name}
-                      photo={ImageConvert(founder.photo)}
-                      age={""}
-                      position={""}
-                      gender={founder.gender}
-                      email={founder.email}
-                      phone={founder.phone}
-                      description={founder.description}
-                    />
-                  </Grid>
-                ))}
+          ಶ್ರೀ ಮಾಧ್ವ ಯುವಕ ಸಂಘವು ತನ್ನ ಏಳು ದಶಕಗಳ ಯಶಸ್ವಿ ಪಯಣದಲ್ಲಿ ಅನೇಕ ಮಹನೀಯರ
+          ಅಮೂಲ್ಯ ಕೊಡುಗೆಗಳನ್ನು ಪಡೆದಿದೆ. ಈ ಸಂಘವು ಸ್ಥಾಪನೆಯಾಗಿದ್ದು, ಬೆಳವಣಿಗೆ ಮತ್ತು
+          ಉನ್ನತಿಗೆ ಶ್ರಮಿಸಿದ ಪ್ರಮುಖ ಕಾರಣ ಪುರುಷರ ಕೊಡುಗೆಗಳನ್ನು ನಾವು ಗೌರವದಿಂದ
+          ನೆನಪಿಸಿಕೊಳ್ಳಬೇಕು. ಅವರ ತ್ಯಾಗ ಮತ್ತು ಶ್ರಮವು ಸಂಘದ ಪ್ರಗತಿಗೆ ಅತ್ಯಂತ
+          ಮುಖ್ಯವಾಗಿದ್ದು, ಅವರ ಸೇವೆಗಳು ಸಂಘದ ಯಶಸ್ಸಿನ ಹಿನ್ನೆಲೆಯಲ್ಲಿ ಒಂದು ಪ್ರಮುಖ
+          ಅಂಶವಾಗಿದೆ. ಈ ಮಹನೀಯರು ಸಂಘದ ಸ್ಥಾಪನೆಯಿಂದ ಹಿಡಿದು ಅದರ ಬೆಳವಣಿಗೆಯಲ್ಲಿ ತಮ್ಮ
+          ಅಮೂಲ್ಯ ಸಮಯ, ಶಕ್ತಿ ಮತ್ತು ಸಂಪನ್ಮೂಲಗಳನ್ನು ಅರ್ಪಿಸಿದ್ದಾರೆ. ಅವರ ನಿಷ್ಠಾವಂತ
+          ಸೇವೆಗಳು ಸಂಘದ ಸದಸ್ಯರಿಗೆ ಪ್ರೇರಣೆ ಮತ್ತು ಮಾದರಿಯಾಗಿದ್ದು, ಮುಂದಿನ
+          ತಲೆಮಾರಿನವರಿಗೆ ಅವರ ಸೇವೆಗಳು ಒಂದು ದೀಪಸ್ತಂಭವಾಗಿವೆ. ನಾವು ಈ ಮಹನೀಯರ
+          ಸೇವೆಗಳನ್ನು ಯಾವಾಗಲೂ ಗೌರವದಿಂದ ನೆನಪಿಸಿಕೊಳ್ಳಬೇಕು ಮತ್ತು ಅವರ ಸಂಕಲ್ಪಗಳನ್ನು
+          ಮುಂದುವರಿಸಬೇಕು.
+          <Grid
+            sx={{ flexGrow: 1 }}
+            container
+            spacing={2}
+            justifyContent="center"
+            marginTop={5}
+          >
+            <Grid item xs={10}>
+              <Grid container justifyContent="center" spacing={4}>
+                
+                  {founders &&
+                  Object.values(founders).map((founder, index) => (
+                    <Grid key={index} item xs={6} sm={6}>
+                      <FounderMember
+                        name={founder.name}
+                        age={""}
+                        position={""}
+                        gender={founder.gender}
+                        email={founder.email}
+                        phone={founder.phone}
+                        description={founder.description}
+                      />
+                    </Grid>
+                  ))}
+        
+              </Grid>
             </Grid>
           </Grid>
-        </Grid>
+        </div>
       </div>
     </>
   );

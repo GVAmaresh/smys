@@ -24,7 +24,7 @@ function Committe(committe: { committe: { [key: string]: CommitteeMember } }) {
                 <Grid key={index} item xs={6} sm={3}>
                   <CommitteMember
                     name={committe.name}
-                    photo={ImageConvert(committe.photo)}
+                    photo={ImageConvert(committe.photo || "")}
                     age={committe.age}
                     position={committe.position}
                     gender={committe.gender}

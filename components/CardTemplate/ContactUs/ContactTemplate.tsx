@@ -3,7 +3,7 @@ import ConnectWithoutContactIcon from "@mui/icons-material/ConnectWithoutContact
 import EmailIcon from "@mui/icons-material/Email";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import CallIcon from "@mui/icons-material/Call";
-// import FacebookIcon from '@mui/icons-material/Facebook';
+
 import { FaFacebook } from "react-icons/fa6";
 import Link from "next/link";
 import { IconButton } from "@mui/material";
@@ -65,7 +65,6 @@ export default function ContactTemplate({
                   aria-label="account of current user"
                   aria-controls="menu-appbar"
                   aria-haspopup="true"
-                  // onClick={handleOpenNavMenu}
                   color="inherit"
                 >
                   <FiPhoneCall />

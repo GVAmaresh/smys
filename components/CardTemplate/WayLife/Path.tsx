@@ -2,10 +2,7 @@ import { ImageConvert } from "@/lib/smys_details/Image_Conversion";
 import Heading from "../Font/Heading";
 import PathTemplate from "./PathTemplate";
 import { Journey } from "@/lib/types/Data"; 
-// interface JourneyData {
-//   photo: string;
-//   description: string;
-// }
+
 export default function Path({ data }: { data: Journey }) {
   console.log(ImageConvert(data.photo))
   return (

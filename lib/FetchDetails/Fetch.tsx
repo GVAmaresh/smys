@@ -49,27 +49,7 @@ export const DownloadPhoto = async (): Promise<any> => {
 
 export const GetImages = async (url: string): Promise<any> => {
   try {
-    // https://drive.google.com/drive/folders/1Sz9wqnmMo1LcDkEbT__mlXFtA4c0BOsg?usp=sharing
-    // const parts = url.split("/");
-    // let folderId = "";
-    // if (parts && parts.length > 0) {
-    //   folderId = parts.pop()!.split("?")[0];
-    // } else {
-    //   throw new Error("Invalid URL format");
-    // }
-    // console.log("Folder ID:", folderId);
 
-    // const newUrl = `https://www.googleapis.com/drive/v2/files/${folderId}/children`;
-    // const response = await fetch(newUrl);
-    // const data = await response.json();
-    // if (!response.ok) {
-    //   throw new Error(
-    //     data.error.message || "Failed to retrieve folder contents."
-    //   );
-    // }
-    // const fileIds = data.items.map((item: any) => item.id);
-    // console.log(fileIds)
-    // return fileIds;
 
 
     const response = await fetch("/api/getImages", {

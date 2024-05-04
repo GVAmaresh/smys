@@ -38,14 +38,7 @@ export default function Events() {
     getEventPageEnglish()
       .then((data: any) => {
         setData(data);
-        // const group = data?.Events.Historical;
-        // if (group) {
-        //   const datas = await GetImages(group);
-        //   setHistorical(datas);
-        // }
-        // console.log(data.Events.Historical);
-        // setHistorical(data.Events.Historical);
-        // setAnnual(data.Events.Annual);
+
         setJyana(data.Events.Jyana);
       })
       .catch((err) => {

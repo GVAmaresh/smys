@@ -21,7 +21,7 @@ export default function CommitteMember(data:CommitteeMember) {
         <CardContent>
           <div className=" font-extrabold text-xs  md:text-lg md:text-center">{data.name}</div>
           <div className="  font-medium text-xs  md:text-xs  md:text-center mt-2 mb-2">{data.position}</div>
-          <div className="font-medium text-xs  md:text-xs  md:text-center mt-2 mb-2"> {data.phone}</div>
+          {/* <div className="font-medium text-xs  md:text-xs  md:text-center mt-2 mb-2"> {data.phone}</div> */}
           {/* <div className="font-medium text-slate-500  text-xs  ">{data.description}</div> */}
         </CardContent>
       </CardActionArea>
