@@ -7,7 +7,7 @@ export default function Title() {
         Sri Madwa Yuvaka Sangha
       </div>
       <div className=" mt-8 text-2xl sm:text-3xl md:text-3xl lg:text-5xl flex justify-center font-extrabold">
-        ಶ್ರಿ ಮಾಧವ ಯುವಕ ಸಂಘ
+      ಶ್ರೀ ಮಾಧ್ವ ಯುವಕ ಸಂಘ(ನೋಂ)
       </div>
     </div>
   );
