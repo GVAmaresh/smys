@@ -4,6 +4,7 @@ import { Committe, Founders, Satpantha } from './Members';
 import { ChangeAddress, Intro, Journey } from './Information';
 import { Button } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
+import Loading from '@/components/Navbar/Loading';
 
 interface Address {
   add: string;
@@ -152,7 +153,7 @@ export default function ChangeDetails() {
   };
 
   if (!open) {
-    return <div>Loading...</div>;
+    return <div><Loading/></div>;
   }
   const handleClick = ()=>{
     updateDataFromFirebase(open)

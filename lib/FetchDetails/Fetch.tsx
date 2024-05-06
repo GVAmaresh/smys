@@ -1,9 +1,11 @@
 import { ID_URL } from "../smys_details/ID_URL";
 
 
-const URL = process.env.NEXT_PUBLIC_VERCEL_URL
-  ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api`
-  : "http://localhost:3000/api";
+// const URL = process.env.NEXT_PUBLIC_VERCEL_URL
+//   ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api`
+//   : "http://localhost:3000/api";
+
+const URL = "https://hostel-backend-nwey.onrender.com/api"
 
 export const FetchDetails = async (): Promise<any> => {
   try {

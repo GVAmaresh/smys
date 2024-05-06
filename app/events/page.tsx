@@ -9,6 +9,7 @@ import Link from "next/link";
 import { getEventPageEnglish } from "@/firebase/helper";
 import ImageSliding from "@/components/CardTemplate/Event/ImageSliding";
 import CarouselWithoutText from "@/components/CardTemplate/CarouselWithoutText/CarouselWithoutText";
+import Loading from "@/components/Navbar/Loading";
 
 interface ImageSlidingProps {
   photo?: string;
@@ -92,7 +93,7 @@ export default function Events() {
             </div>
           </>
         ) : (
-          <div>Loading</div>
+          <div><Loading/></div>
         )}
       </div>
     </>

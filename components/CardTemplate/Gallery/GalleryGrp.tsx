@@ -9,6 +9,7 @@ import Navbar from "@/components/Navbar/Navbar";
 import { AuthDetailsGDrive, getGalleryPageEnglish } from "@/firebase/helper";
 import { GetImages } from "@/lib/FetchDetails/Fetch";
 import { ImageConvert } from "@/lib/smys_details/Image_Conversion";
+import Loading from "@/components/Navbar/Loading";
 
 export default function GalleryGrp() {
   const [data, setData] = useState<Data | null>(null);
@@ -85,7 +86,7 @@ export default function GalleryGrp() {
           </Grid>
         </div>
       ) : (
-        <div>Loading</div>
+        <div><Loading/></div>
       )}
     </>
   );

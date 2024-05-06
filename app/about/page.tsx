@@ -7,6 +7,7 @@ import Navbar from "@/components/Navbar/Navbar";
 import { useEffect, useState } from "react";
 import Data from "@/lib/types/Data";
 import { getAboutPageEnglish } from "@/firebase/helper";
+import Loading from "@/components/Navbar/Loading";
 export default function About() {
   const [data, setData] = useState<Data | null>(null);
 
@@ -22,7 +23,7 @@ console.log(data?.Satpanta)
   return (
     <>
       {data == null ? (
-        <div>Loading</div>
+        <div><Loading/></div>
       ) : (
         <>
           <Navbar options={["Home", "Events", "Gallery"]} />

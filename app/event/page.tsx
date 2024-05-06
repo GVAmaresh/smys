@@ -7,10 +7,11 @@ import { FetchDetails } from "@/lib/FetchDetails/Fetch";
 import Data from "@/lib/types/Data";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
+import Loading from "@/components/Navbar/Loading";
 
 export default function NewEvent() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<div><Loading/></div>}>
       <NewEventContent />
     </Suspense>
   );
