@@ -28,7 +28,7 @@ export default function About() {
         if (element) {
           element.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
-      }, 1500);
+      }, 500);
     }
     
   }, [pathname, searchParams]);
