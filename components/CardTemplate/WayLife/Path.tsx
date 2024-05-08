@@ -8,8 +8,8 @@ export default function Path({ data }: { data: Journey }) {
   return (
     <>
         <div className="bg-gray-300 h-px  w-full mt-56"></div>
-      <div className="mt-32 sm:mt-32  md:mt-40 lg:mt-40">
-        <Heading text={"ನಡೆದು ಬಂದ ಹಾದಿ...."} />
+      <div className="mt-10 sm:mt-12  md:mt-10 lg:mt-10">
+        <Heading text={"ನಡೆದು ಬಂದ ಹಾದಿ...."} isLine={false}/>
         <div className="flex flex-col items-center">
           <PathTemplate
             name={""}

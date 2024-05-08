@@ -15,7 +15,6 @@ import { FiAlignLeft } from "react-icons/fi";
 import Link from "next/link";
 import Image from "next/image";
 
-
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function Navbar({ options }: { options: Array<string> }) {
@@ -23,7 +22,13 @@ function Navbar({ options }: { options: Array<string> }) {
     (acc, curr) => {
       return {
         ...acc,
-        [curr]: `/${curr.toLowerCase() == "home" ? "/" : curr.toLowerCase()}`,
+        [curr]: `/${
+          curr.toLowerCase() == "home"
+            ? "/"
+            : curr.toLowerCase() == "contact"
+            ? "/#contact"
+            : curr.toLowerCase()
+        }`,
       };
     },
     options.length ? {} : { "": "/" }
@@ -73,7 +78,13 @@ function Navbar({ options }: { options: Array<string> }) {
               {/* <AdbIcon  /> */}
               {/* <FiAlignLeft style={{ display: (window.innerWidth < 768) ? "none" : "flex", marginRight: 1 }} /> */}
 
-              <Image className="hidden md:flex" src="/logo.jpg" alt="hh" height={50} width={50} />
+              <Image
+                className="hidden md:flex"
+                src="/logo.jpg"
+                alt="hh"
+                height={50}
+                width={50}
+              />
               <Typography
                 variant="h6"
                 noWrap
@@ -111,7 +122,7 @@ function Navbar({ options }: { options: Array<string> }) {
                   color="inherit"
                 >
                   {/* <MenuIcon /> */}
-                  <FiAlignLeft/>
+                  <FiAlignLeft />
                 </IconButton>
                 <Menu
                   id="menu-appbar"
@@ -142,7 +153,13 @@ function Navbar({ options }: { options: Array<string> }) {
               </Box>
               {/* <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 0 }} /> */}
               {/* <FiAlignLeft style={{ display: (window.innerWidth < 768) ? "none" : "flex", marginRight: 1 }} />  */}
-              <Image className="flex md:hidden" src="/logo.jpg" alt="img" height={40} width={40} />
+              <Image
+                className="flex md:hidden"
+                src="/logo.jpg"
+                alt="img"
+                height={40}
+                width={40}
+              />
               <Typography
                 variant="h5"
                 noWrap

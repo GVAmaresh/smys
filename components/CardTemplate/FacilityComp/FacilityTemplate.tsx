@@ -22,7 +22,7 @@ export default function FacilityTemplate() {
     getEventPageEnglish()
       .then(async (data: any) => {
         setData(data);
-        const group1 = data?.Events.Historical;
+        const group1 = data?.Events.Annual;
         console.log("Group1 = ", group1);
         if (group1) {
           const datas = await GetImages(group1);
@@ -41,7 +41,7 @@ export default function FacilityTemplate() {
             <div className="mt-36">
               {/* <Navbar options={["Home", "About", "Gallery"]} /> */}
               <div className="mt-16"></div>
-              <Heading text="Historical Events" />
+              <Heading text="Facility" />
               <div className="mt-8 mb-8">
                 {historical && (
                   <CarouselWithoutText imageList={historical.photo} />
@@ -78,11 +78,14 @@ export default function FacilityTemplate() {
                     </Grid>
                   ))} */}
                       {[
-                        "NewThing",
-                        "OldThings",
-                        "GreatThings",
-                        "VeryVeryGreatthing",
-                        "Thatsall",
+                        "Subsidised Boarding",
+                        "Furnished Rooms",
+                        "Scholarship Assistances",
+                        "Sports Club",
+                        "Library ",
+                        "Frequent Seminars",
+                        "Security and Maintainance",
+                        "Cultural Environment"
                       ].map((item, index) => (
                         <Grid key={index} item xs={6} sm={6}>
                           {/* <CommitteMember
