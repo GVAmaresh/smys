@@ -9,7 +9,7 @@ const app = initializeApp(firebaseConfig);
 export const db = getDatabase(app);
 
 let analytics = null;
-let auth = null;
+export let auth = null;
 
 if (typeof window !== "undefined") {
   const { getAnalytics } = require("firebase/analytics");
