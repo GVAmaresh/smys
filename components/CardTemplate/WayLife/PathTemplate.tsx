@@ -5,6 +5,7 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import { CardMedia } from "@mui/material";
+import wayLife from "@/public/images/way_life.jpg"
 
 interface FounderMemberProp {
   name: string;
@@ -42,7 +43,7 @@ export default function FounderMember({
           width: { xs: "100%", md: 400 },
           height: { xs: 300, sm: 400, md: 250, lg: 350 },
         }}
-        image={image}
+        image={wayLife.src}
         alt="Founder image"
       />
       {/* . ಈ ಪ್ರಸ್ತಾಪದ ಫಲಿತಾಂಶವಾಗಿ, .  .. */}
@@ -52,7 +53,7 @@ export default function FounderMember({
           <div className="font-small text-sm">
 
             <ul className="list-outside hover:list-inside list-disc">
-              <li className="pt-1">ಶ್ರೀ ಮಾಧ್ವ ಯುವಕ ಸಂಘ (ರಿ), ಕೃಷ್ಣ ರಾಜೇಂದ್ರ ರಸ್ತೆ, ಬೆಂಗಳೂರು</li>
+              <div className="pt-1 font-extrabold text-lg">ಶ್ರೀ ಮಾಧ್ವ ಯುವಕ ಸಂಘ (ರಿ), ಕೃಷ್ಣ ರಾಜೇಂದ್ರ ರಸ್ತೆ, ಬೆಂಗಳೂರು</div>
               <li className="pt-1">
                 1945 ರಂದು ದಿವಂಗತ ಶ್ರೀ ಸುಬೋಧ ರಾಮರಾಯರ ನೇತೃತ್ವದಲ್ಲಿ ಸ್ಥಾಪನೆಗೊಂಡಿತು.
                 ಉನ್ನತ ವ್ಯಾಸಂಗಕ್ಕಾಗಿ ಬೆಂಗಳೂರಿಗೆ ಬರುವ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಉಚಿತ ವಸತಿ

@@ -1,6 +1,7 @@
 import { ImageConvert } from "@/lib/smys_details/Image_Conversion";
 import Heading from "../Font/Heading";
 import PathTemplate from "./PathTemplate";
+
 import { Journey } from "@/lib/types/Data";
 
 export default function Path({ data }: { data: Journey }) {
@@ -13,7 +14,8 @@ export default function Path({ data }: { data: Journey }) {
         <div className="flex flex-col items-center">
           <PathTemplate
             name={""}
-            image={ImageConvert(data.photo)}
+            // image={ImageConvert(data.photo)}
+            image={""}
             description={data.description}
           />
         </div>
