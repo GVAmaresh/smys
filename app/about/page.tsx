@@ -13,7 +13,7 @@ import ProgramTemplate from "@/components/CardTemplate/FacilityComp/ProgramTempl
 import { usePathname, useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
 
-export function AboutTemplate() {
+function AboutTemplate() {
   const [data, setData] = useState<Data | null>(null);
   const pathname = usePathname();
   const searchParams = useSearchParams();
