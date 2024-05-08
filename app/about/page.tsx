@@ -12,7 +12,8 @@ import FacilityTemplate from "@/components/CardTemplate/FacilityComp/FacilityTem
 import ProgramTemplate from "@/components/CardTemplate/FacilityComp/ProgramTemplate";
 import { usePathname, useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
-export default function About() {
+
+export function AboutTemplate() {
   const [data, setData] = useState<Data | null>(null);
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -21,16 +22,15 @@ export default function About() {
   useEffect(() => {
     const url = `${pathname}?${searchParams}`;
     let pathId = url.split("=")[1];
-    console.log(pathId)
+    console.log(pathId);
     if (pathId) {
       setTimeout(() => {
         const element = document.getElementById(pathId);
         if (element) {
-          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
         }
       }, 500);
     }
-    
   }, [pathname, searchParams]);
 
   useEffect(() => {
@@ -46,7 +46,6 @@ export default function About() {
 
   return (
     <>
-    <Suspense fallback={<Loading />}>
       {data == null ? (
         <div>
           <Loading />
@@ -75,6 +74,15 @@ export default function About() {
           </div>
         </>
       )}
+    </>
+  );
+}
+
+export default function About() {
+  return (
+    <>
+      <Suspense>
+        <AboutTemplate />
       </Suspense>
     </>
   );
