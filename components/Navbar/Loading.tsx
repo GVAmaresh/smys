@@ -19,7 +19,7 @@ export default function Loading() {
         </div>
       </div> */}
     <div className="flex justify-center items-center h-screen w-screen">
-      <Image src={loading} height={505} width={505} alt="" />
+      <Image src={loading} height={305} width={305} alt="" />
     </div>
     </>
   );

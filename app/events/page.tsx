@@ -74,9 +74,9 @@ export default function Events() {
 
   return (
     <>
-      <div className="mt-36">
+      <div className="">
         {data?.Events ? (
-          <>
+          <div className="mt-36">
             <Navbar options={["Home", "About", "Gallery"]} />
             <div className="mt-16"></div>
             <Heading text="Historical Events" />
@@ -111,7 +111,7 @@ export default function Events() {
               {jyana && <CarouselWithoutText details={jyana} />}
             </div>
 
-          </>
+          </div>
         ) : (
           <div>
             <Loading />

@@ -47,6 +47,7 @@ export default function FacilityTemplate() {
                   <CarouselWithoutText imageList={historical.photo} />
                 )}
               </div>
+              
               <div
                 className="m-10 md:m-64 md:mt-10 md:mb-10 p-10 mt-10 mb-10 border-2"
                 style={{
@@ -54,6 +55,7 @@ export default function FacilityTemplate() {
                   borderTopLeftRadius: "50px",
                 }}
               >
+                <div className=" font-extrabold text-2xl">Facility Offered:</div>
                 <Grid
                   sx={{ flexGrow: 1 }}
                   container
@@ -63,20 +65,6 @@ export default function FacilityTemplate() {
                 >
                   <Grid item xs={10}>
                     <Grid container justifyContent="center" spacing={4}>
-                      {/* {founders &&
-                  Object.values(founders).map((founder, index) => (
-                    <Grid key={index} item xs={6} sm={6}>
-                      <FounderMember
-                        name={founder.name}
-                        age={""}
-                        position={""}
-                        gender={founder.gender}
-                        email={founder.email}
-                        phone={founder.phone}
-                        description={founder.description}
-                      />
-                    </Grid>
-                  ))} */}
                       {[
                         "Subsidised Boarding",
                         "Furnished Rooms",
@@ -87,16 +75,8 @@ export default function FacilityTemplate() {
                         "Security and Maintainance",
                         "Cultural Environment"
                       ].map((item, index) => (
-                        <Grid key={index} item xs={6} sm={6}>
-                          {/* <CommitteMember
-                            name={item}
-                            age={""}
-                            position={""}
-                            gender={""}
-                            email={""}
-                            phone={""}
-                            description={""}
-                          /> */}
+                        <Grid key={index} item xs={9} sm={6} md={6}>
+
                           <FounderMember
                             name={item}
                             age={""}

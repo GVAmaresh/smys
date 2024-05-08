@@ -34,6 +34,11 @@ export function SecretaryTemplate({
         height: "100%",
         marginTop: 3,
       }}
+      className="border-2"
+      style={{
+        borderBottomRightRadius: "50px",
+        borderTopLeftRadius: "50px",
+      }}
     >
       <CardMedia
         component="img"

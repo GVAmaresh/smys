@@ -61,18 +61,18 @@ const Carousel = (props: PropType) => {
           ))}
         </div>
       </div>
-
-      <div className="embla__controls">
-        <div className="embla__buttons">
-          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
-        </div>
-
-        <div className="embla__progress">
-          <div
-            className="embla__progress__bar"
-            style={{ transform: `translate3d(${scrollProgress}%,0px,0px)` }}
-          />
+      <div className=" flex justify-center w-screen lg:-ml-40 ">
+        <div className="embla__controls">
+          <div className="embla__buttons">
+            <PrevButton
+              onClick={onPrevButtonClick}
+              disabled={prevBtnDisabled}
+            />
+            <NextButton
+              onClick={onNextButtonClick}
+              disabled={nextBtnDisabled}
+            />
+          </div>
         </div>
       </div>
     </div>
