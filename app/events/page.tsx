@@ -74,7 +74,7 @@ export default function Events() {
 
   return (
     <>
-      <div className="">
+      <div>
         {data?.Events ? (
           <div className="mt-36">
             <Navbar options={["Home", "About", "Gallery"]} />
@@ -99,7 +99,7 @@ export default function Events() {
                   borderTopLeftRadius: "50px",
                 }}
               >
-                ಶ್ರೀ ಮಾಧ್ವ ಯುವಕ ಸಂಘವು{" "}
+                ಶ್ರೀ ಮಾಧ್ವ ಯುವಕ ಸಂಘವು
                 <span className=" font-extrabold">"ಜ್ಞಾನ ಭಾರತೀ"</span> ಎಂಬ
                 ಕಾರ್ಯಕ್ರಮದ ಅಡಿಯಲ್ಲಿ ವಿಚಾರ ಸಂಕಿರಣವನ್ನು ತನ್ನ ಅಮೃತ ಮಹೋತ್ಸವದ ಶುಭ
                 ಸಂದರ್ಭದಲ್ಲಿ ಆರಂಭವಾಯಿತು. ಹಲವಾರು ಪಠ್ಯಪುಸ್ತಕೇತರ ಮತ್ತು ಸಾಮಾಜಿಕ
