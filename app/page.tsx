@@ -8,7 +8,7 @@ import Navbar from "@/components/Navbar/Navbar";
 import { useEffect, useState } from "react";
 import { getHomePageEnglish } from "@/firebase/helper";
 import Data from "@/lib/types/Data";
-import PresidentVision from "@/components/CardTemplate/Vision/PresidentVision";
+import {PresidentVision, WardenMessage} from "@/components/CardTemplate/Vision/PresidentVision";
 import SecretaryVision from "@/components/CardTemplate/Vision/SecretaryDesk";
 import Loading from "@/components/Navbar/Loading";
 import { useFirebase } from "@/firebase/firebase";
@@ -45,10 +45,12 @@ export default function Home() {
             description2={data.Intro.Madhwa.description}
           />
           <Title />
+          
           <Path data={data.Journey} />
           <MainProps />
           <PresidentVision data={data.Journey} />
           <SecretaryVision data={data.Journey} />
+          <WardenMessage data={data.Journey} />
           {/* <Activity /> */}
           <Contact
             add={data.Address.add}

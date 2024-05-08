@@ -1,5 +1,9 @@
-import FacilityComponent from "@/components/CardTemplate/FacilityComponent/FacilityComponent";
+import FacilityComponent from "@/components/CardTemplate/FacilityComp/FacilityComponent";
 
-export default function Facilty(){
-    <FacilityComponent/>
+export default function Facilty() {
+  return (
+    <>
+      <FacilityComponent />
+    </>
+  );
 }

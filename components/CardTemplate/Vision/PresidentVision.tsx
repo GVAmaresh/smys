@@ -39,7 +39,7 @@ export function PresidentTemplate({
         <CardContent>
           <div className="font-bold text-4xl mb-4">{}</div>
           <div className="font-small text-base ">{description}</div>
-          <div className=""> -ಡಾ. ಎಂ ಆರ್ ವೆಂಕಟೇಶ್ ಪ್ರಸಾದ</div>
+          <div className="mt-4">{name}</div>
         </CardContent>
       </Box>
       <CardMedia
@@ -55,7 +55,7 @@ export function PresidentTemplate({
   );
 }
 
-export default function PresidentVision({ data }: { data: Journey }) {
+export function PresidentVision({ data }: { data: Journey }) {
   console.log(ImageConvert(data.photo));
   return (
     <>
@@ -64,7 +64,7 @@ export default function PresidentVision({ data }: { data: Journey }) {
           <Heading text={"President's Vision"} />
           <div className="flex flex-col items-center">
             <PresidentTemplate
-              name={""}
+              name={"-ಡಾ. ಎಂ ಆರ್ ವೆಂಕಟೇಶ್ ಪ್ರಸಾದ"}
               image={ImageConvert(data.photo)}
               description={
                 "ನಮ್ಮ ವಿದ್ಯಾರ್ಥಿ ನಿಲಯ ಮಕ್ಕಳ ಶೈಕ್ಷಣಿಕ ಮತ್ತು ವೈಯಕ್ತಿಕ ಬೆಳವಣಿಗೆಗೆ ಒಂದು ಸುರಕ್ಷಿತ ಮತ್ತು ಪ್ರೇರಣಾದಾಯಕ ವಾತಾವರಣ ಒದಗಿಸುವ ಸಂಕಲ್ಪದೊಂದಿಗೆ ಸ್ಥಾಪಿಸಲಾಗಿದೆ. ನಾವು ಮಕ್ಕಳಿಗೆ ಉತ್ತಮ ಸಂಸ್ಕಾರ ಮತ್ತು ಸಮಾಜದ ಪ್ರತಿಷ್ಠಿತ ಸದಸ್ಯರಾಗಿ ಬೆಳೆಯುವಲ್ಲಿ ಸಹಾಯ ಮಾಡುವ ಗುರಿಯನ್ನು ಹೊಂದಿದೆ. ನಾವು ನಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಸಮರ್ಥ ಜೀವನ ಕೌಶಲ್ಯಗಳನ್ನು ಕಲಿಸಲು ಬದ್ಧವಾಗಿದ್ದೇವೆ. ನಮ್ಮ ವಿದ್ಯಾರ್ಥಿ ನಿಲಯ ನಿಮ್ಮ ಮಕ್ಕಳಿಗೆ ಅವರ ಸಾಧನೆಗಳಲ್ಲಿ ಯಶಸ್ಸು ಸಾಧಿಸಲು ಅಗತ್ಯವಾದ ಸಹಾಯ ಮತ್ತು ಮಾರ್ಗದರ್ಶನ ಒದಗಿಸುತ್ತದೆ.ನಾವು ನಿಮ್ಮ ಮಕ್ಕಳ ಭವಿಷ್ಯದ ನಿರ್ಮಾಣಕರ್ತರಾಗಿ ಅವರ ಸಮಗ್ರ ಬೆಳವಣಿಗೆಗೆ ಸಹಾಯ ಮಾಡುವ ಹೊಣೆಯನ್ನು ಹೆಗಲೇರಿಸಿಕೊಂಡಿದ್ದೇವೆ. ನಿಮ್ಮ ಮಕ್ಕಳ ಯಶಸ್ಸು ನಮ್ಮ ಯಶಸ್ಸು ಎಂಬ ಭಾವನೆಯೊಂದಿಗೆ, ನಾವು ಅವರ ಪ್ರತಿ ಹೆಜ್ಜೆಯಲ್ಲಿ ಅವರಿಗೆ ಬೆಂಬಲವಾಗಿರುತ್ತೇವೆ."      }
@@ -72,7 +72,29 @@ export default function PresidentVision({ data }: { data: Journey }) {
           </div>
         </div>
       </>
-      );
+      
+    </>
+  );
+}
+export function WardenMessage({ data }: { data: Journey }) {
+  console.log(ImageConvert(data.photo));
+  return (
+    <>
+      <>
+        <div className="mt-10 sm:mt-10 md:mt-10 lg:mt-10">
+          <Heading text={"Warden's Message"} />
+          <div className="flex flex-col items-center">
+            <PresidentTemplate
+              name={"-SMT USHA madam"}
+              image={ImageConvert(data.photo)}
+              description={
+                "ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಅವರ ವಯಸ್ಸಿಗೆ ಬೇಕಾದ ಸ್ವಾತಂತ್ರ ಕೇವಲ ಹಕ್ಕು ಮಾತ್ರವಲ್ಲ ಜವಾಬ್ದಾರಿ ಕೂಡ. ಬೇರೆ ಊರುಗಳಿಂದ ಬೆಂಗಳೂರಿಗೆ ಉನ್ನತ ವ್ಯಾಸಂಗಕ್ಕಾಗಿ ಬರುವ ಮಕ್ಕಳಿಗೆ ಹಲವಾರು ರೀತಿಯ ಆಕರ್ಷಣೆಗಳು ಈ ಮಹಾನಗರದಲ್ಲಿ ಲಭ್ಯವಿದೆ. ಅವುಗಳ ಕಡೆ ಗಮನಹರಿಸದಂತೆ ಉತ್ತಮ ಸಂಸ್ಕೃತಿಯೊಂದಿಗೆ ಮನೆಯ ವಾತಾವರಣವನ್ನು ಸೃಷ್ಟಿಸುವ ಆಲಯವೇ ಶ್ರೀ ಮಾಧ್ವ ಯುವಕ ಸಂಘ. ಭವಿಷ್ಯದಲ್ಲಿ ರಾಷ್ಟ್ರಕ್ಕೆ ದೊಡ್ಡ ಸಂಪತ್ತಾಗಲಿರುವ ಈ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಸಂಸ್ಕಾರ ಸಂಸ್ಕೃತಿಗಳ ಪೋಷಣೆ ಮಾಡುವ ಪ್ರಯತ್ನ ನಿಲಯ ಪಾಲಕರಾಗಿ ನನ್ನ ಕರ್ತವ್ಯ ಹಾಗೂ ಈ ಸೇವೆಯಲ್ಲಿ ತೊಡಗಿರುವುದು ನನಗೆ ಸಂತೋಷ ಕೊಡುತ್ತದೆ."      }
+                
+            />
+          </div>
+        </div>
+      </>
+      
     </>
   );
 }

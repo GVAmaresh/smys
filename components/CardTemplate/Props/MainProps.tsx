@@ -1,31 +1,42 @@
-import { Grid } from "@mui/material";
+import { Grid, ListItem, MenuItem, Stack } from "@mui/material";
 import PropsTemplate from "./PropsTemplate";
 
 export default function MainProps() {
   return (
     <>
-    <div className="mt-28 mb-28 flex justify-center ml-1 sm:ml-32 sm:mt-4 md:ml-1 ">
-      <Grid
-        sx={{ flexGrow: 1 }}
-        container
-        spacing={1}
-        justifyContent="center"
-        marginTop={5}
-      >
-        <Grid item xs={15}>
-          <Grid container justifyContent="center" spacing={3}>
-            <Grid item xs={9} sm={9} md={3}>
-              <PropsTemplate name="Facility" image="/images/pipleline.jpeg" />
-            </Grid>
-            <Grid item xs={9} sm={9} md={3}>
+      <div className="mt-20 mb-32 flex justify-center sm:mt-4 md:mt-28 md:mb-40  ">
+        <Stack direction={{ xs: 'column', sm: 'column', md: 'column', lg: 'row' }} spacing={2}>
+          <ListItem>
+            <PropsTemplate name="Facility" image="/images/pipleline.jpeg" />
+          </ListItem>
+          <ListItem>
             <PropsTemplate name="Program" image="/images/pipleline.jpeg" />
-            </Grid>
-            <Grid item xs={9} sm={9} md={3}>
+          </ListItem>
+          <ListItem>
+            {" "}
             <PropsTemplate name="Student Form" image="/images/pipleline.jpeg" />
-            </Grid>
+          </ListItem>
+        </Stack>
+        {/* <Grid container spacing={1}>
+          <Grid xs={6}>
+            <MenuItem>
+              <PropsTemplate name="Facility" image="/images/pipleline.jpeg" />
+            </MenuItem>
           </Grid>
-        </Grid>
-      </Grid>
+          <Grid xs={6}>
+            <MenuItem>
+              <PropsTemplate name="Program" image="/images/pipleline.jpeg" />
+            </MenuItem>
+          </Grid>
+          <Grid xs={6}>
+            <MenuItem>
+              <PropsTemplate
+                name="Student Form"
+                image="/images/pipleline.jpeg"
+              />
+            </MenuItem>
+          </Grid>
+        </Grid> */}
       </div>
     </>
   );

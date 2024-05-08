@@ -8,8 +8,10 @@ import { CardMedia } from "@mui/material";
 
 interface FounderMemberProp {
   name: string;
-  image: string;
-  description: string;
+  age?:string
+  
+  image?: string;
+  description?: string;
   phone?: string;
   email?: string;
 }

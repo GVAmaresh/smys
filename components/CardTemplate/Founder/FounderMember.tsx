@@ -5,7 +5,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 import { CommitteeMember } from "@/lib/types/Data";
-export default function CommitteMember(data: CommitteeMember) {
+export default function FounderMember(data: CommitteeMember) {
   return (
     <div className=" font-medium  text-xs  md:text-lg ">
       {" "}

@@ -1,11 +1,11 @@
 import Image from "next/image";
 import loading from "@/components/Navbar/final_loading_gif.gif";
-
+import man from "@/public/images/man.jpg"
 
 export default function Loading() {
   return (
     <>
-      <div className="">
+      {/* <div className="">
         <div className="ml-32 mt-52 w-1/2 md:w-2/5 md:mt-32 md:ml-80 md:pl-52">
           <Image
             src={loading}
@@ -17,7 +17,10 @@ export default function Loading() {
             unoptimized={true}
           />
         </div>
-      </div>
+      </div> */}
+    <div className="flex justify-center items-center h-screen w-screen">
+      <Image src={loading} height={505} width={505} alt="" />
+    </div>
     </>
   );
 }

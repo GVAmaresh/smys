@@ -39,7 +39,6 @@ export default function Events() {
     getEventPageEnglish()
       .then((data: any) => {
         setData(data);
-
         setJyana(data.Events.Jyana);
       })
       .catch((err) => {
