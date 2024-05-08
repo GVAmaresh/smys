@@ -4,7 +4,7 @@ import Event from "@/components/CardTemplate/Event/Event";
 import Founder from "@/components/CardTemplate/Founder/Founder";
 import Satpantha from "@/components/CardTemplate/Satpantha/Satpantha";
 import Navbar from "@/components/Navbar/Navbar";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import Data from "@/lib/types/Data";
 import { getAboutPageEnglish } from "@/firebase/helper";
 import Loading from "@/components/Navbar/Loading";
@@ -46,6 +46,7 @@ export default function About() {
 
   return (
     <>
+    <Suspense fallback={<Loading />}>
       {data == null ? (
         <div>
           <Loading />
@@ -74,6 +75,7 @@ export default function About() {
           </div>
         </>
       )}
+      </Suspense>
     </>
   );
 }
