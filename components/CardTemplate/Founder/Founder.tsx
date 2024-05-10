@@ -22,15 +22,15 @@ export default function Founder({ founders }: FounderProps) {
   }
 
   return (
-    <div className="container mt-20">
+    <div className="mt-20">
       <Heading text="Founders" />
       <div
-        className="m-10 md:m-64 md:mt-10 md:mb-10 p-10 mt-10 mb-10 border-2 kannadaText"
+        className="m-10 sm:m-10 md:m-20 md:mt-10 md:mb-10 p-10 mt-10 mb-10 border-2 kannadaText"
         style={{
           borderBottomRightRadius: "50px",
           borderTopLeftRadius: "50px",
           textAlign: "justify",
-          fontFamily: "Kannada Font", // Specify your Kannada font family here
+          fontFamily: "Kannada Font", 
         }}
       >
         ಶ್ರೀ ಮಾಧ್ವ ಯುವಕ ಸಂಘವು ತನ್ನ ಏಳು ದಶಕಗಳ ಯಶಸ್ವಿ ಪಯಣದಲ್ಲಿ ಅನೇಕ ಮಹನೀಯರ
@@ -46,7 +46,7 @@ export default function Founder({ founders }: FounderProps) {
           marginTop={5}
         >
           {Object.values(founders).map((founder, index) => (
-            <Grid key={index} item xs={12} sm={6}>
+            <Grid key={index} item xs={12} sm={12} md={6} lg={6}>
               <FounderMember
                 name={founder.name || ""}
                 age={founder.age || ""}

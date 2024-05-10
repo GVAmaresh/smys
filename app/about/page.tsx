@@ -63,7 +63,7 @@ function AboutTemplate() {
           <div className="">
             <Navbar options={["Home", "Events", "Gallery"]} />
           </div>
-          <div className="mt-44 "></div>
+          <div className="mt-44"></div>
           <div className="">
             <Founder founders={data.Founders} />
           </div>
