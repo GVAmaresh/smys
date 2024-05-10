@@ -81,7 +81,7 @@ export default function ContactTemplate({
             <div className="text-center text-white text-sm p-1 pt-4 ">
               {phno.map((number, index) => (
                 <div key={index}>
-                  <Link href={`tel:+91${number}`}>+91 {number}</Link>
+                  <Link href={`tel:${number}`}>{number}</Link>
                 </div>
               ))}
             </div>

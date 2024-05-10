@@ -60,7 +60,7 @@ function AboutTemplate() {
         </div>
       ) : (
         <>
-          <div className="">
+          <div className="w-fit">
             <Navbar options={["Home", "Events", "Gallery"]} />
           </div>
           <div className="mt-44"></div>

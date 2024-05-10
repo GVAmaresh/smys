@@ -21,8 +21,8 @@ import { GetFacilityPhoto } from "@/firebase/helper";
 import Heading from "@/components/CardTemplate/Font/Heading";
 
 export default function Home() {
-  const [data, setData] = useState<Data | null>(null);
   useFirebase();
+  const [data, setData] = useState<Data | null>(null);
   useEffect(() => {
     getHomePageEnglish()
       .then((data: any) => setData(data))

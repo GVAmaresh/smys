@@ -5,19 +5,32 @@ import { useEffect, useState } from "react";
 
 import Data from "@/lib/types/Data";
 
-
 import Navbar from "@/components/Navbar/Navbar";
-import { getGalleryPageEnglish, GetGalleryPhoto } from "@/firebase/helper";
+import {
+  getGalleryPageEnglish,
+  GetGalleryPhoto,
+  getHomePageEnglish,
+} from "@/firebase/helper";
 import { GetImages } from "@/lib/FetchDetails/Fetch";
 import { ImageConvert } from "@/lib/smys_details/Image_Conversion";
 import Loading from "@/components/Navbar/Loading";
 import Gallery from "@/app/gallery/page";
+import Contact from "../ContactUs/Contact";
 
 export default function GalleryGrp() {
   const [data, setData] = useState<Data | null>(null);
   const [clickIndex, setClickIndex] = useState<number | null>(null);
   const [click, setClick] = useState<boolean>(false);
   const [newData, setNewData] = useState<string[]>([]);
+
+  const [data2, setData2] = useState<Data | null>(null);
+  useEffect(() => {
+    getHomePageEnglish()
+      .then((data: any) => setData2(data))
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  }, []);
 
   useEffect(() => {
     getGalleryPageEnglish()
@@ -32,17 +45,17 @@ export default function GalleryGrp() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const group = data?.Gallery; 
+        const group = data?.Gallery;
         if (group) {
           // const datas = await GetImages(group);
-          const datas = await GetGalleryPhoto()
+          const datas = await GetGalleryPhoto();
           setNewData(datas?.Gallery);
         }
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
-  
+
     fetchData();
   }, [data]);
   return (
@@ -58,39 +71,49 @@ export default function GalleryGrp() {
             </>
           )}
           <div className="ml-1">
-          <Grid
-            sx={{ flexGrow: 1 }}
-            container
-            spacing={2}
-            justifyContent="center"
-            marginTop={5}
-          >
-            <Grid item xs={10}>
-              <Grid container justifyContent="center" spacing={2}>
-                {Object.values(newData).map((image, index) => (
-                  <Grid key={index} item xs={6} sm={6} md={4} lg={4}>
-                    <CardMedia
-                      component="img"
-                      sx={{
-                        width: {xs: 800,md:"120%"} ,
-                        height: { xs: 200, md: 400 },
-                        borderRadius: 5 ,
-                        marginLeft: { xs: "auto", md: 0 },
-                        marginRight: { xs: "auto", md: 0 },
-                      }}
-                      image={ImageConvert(image) || ""}
-                      alt="Founder image"
-                    />
-
-                  </Grid>
-                ))}
+            <Grid
+              sx={{ flexGrow: 1 }}
+              container
+              spacing={2}
+              justifyContent="center"
+              marginTop={5}
+            >
+              <Grid item xs={10}>
+                <Grid container justifyContent="center" spacing={2}>
+                  {Object.values(newData).map((image, index) => (
+                    <Grid key={index} item xs={6} sm={6} md={4} lg={4}>
+                      <CardMedia
+                        component="img"
+                        sx={{
+                          width: { xs: 800, md: "120%" },
+                          height: { xs: 200, md: 400 },
+                          borderRadius: 5,
+                          marginLeft: { xs: "auto", md: 0 },
+                          marginRight: { xs: "auto", md: 0 },
+                        }}
+                        image={ImageConvert(image) || ""}
+                        alt="Founder image"
+                      />
+                    </Grid>
+                  ))}
+                </Grid>
               </Grid>
             </Grid>
-          </Grid>
+          </div>
+          <div className="">
+          <Heading text={"Contact Us"} />
+            {data2&&<Contact
+              add={data2.Address.add}
+              email={data2.Address.email}
+              phno={data2.Address.phno}
+              social={data2.Address.social}
+            />}
           </div>
         </div>
       ) : (
-        <div><Loading/></div>
+        <div>
+          <Loading />
+        </div>
       )}
     </>
   );
