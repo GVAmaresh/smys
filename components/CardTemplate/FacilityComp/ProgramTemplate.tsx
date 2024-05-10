@@ -3,30 +3,30 @@ import Heading from "../Font/Heading";
 export default function ProgramTemplate() {
   return (
     <>
-      <Heading text="Programmes" />
+      <Heading text="Programs" />
       <div
         className="m-10 md:m-64 md:mt-10 md:mb-10 p-10 mt-10 mb-10 border-2"
         style={{
           borderBottomRightRadius: "50px",
           borderTopLeftRadius: "50px",
+          textAlign:"justify",
         }}
       >
         <li>
           <span className=" font-extrabold text-lg">ಅನ್ನಪೂರ್ಣ ನಿಧಿ: </span>ಈ ನಿಧಿಯು ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಪೌಷ್ಟಿಕ ಆಹಾರವನ್ನು ಒದಗಿಸಲು
-          ಸಂಪನ್ಮೂಲಗಳನ್ನು ಸಂಗ್ರಹಿಸುವ ಗುರಿಯನ್ನು ಹೊಂದಿದೆ, ಅವರು ನಿಲಯದಲ್ಲಿದ್ದಾಗ ಆಹಾರದ
-          ಲಭ್ಯತೆಯನ್ನು ಖಚಿತಪಡಿಸುತ್ತದೆ.
+          ಸಂಪನ್ಮೂಲಗಳನ್ನು ಸಂಗ್ರಹಿಸುವ ಗುರಿಯನ್ನು ಹೊಂದಿದೆ.
         </li>
         <br />
         <li>
         <span className=" font-extrabold text-lg">ವಿದ್ಯಾರ್ಥಿವೇತನ ನಿಧಿ: </span>ವಿದ್ಯಾರ್ಥಿವೇತನ ನಿಧಿಯು ಆರ್ಥಿಕವಾಗಿ ಅಗತ್ಯವಿರುವ
-          ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಅವರ ಶಿಕ್ಷಣ ಅಥವಾ ಹಾಸ್ಟೆಲ್ ವಸತಿಗಾಗಿ ಆರ್ಥಿಕ ನೆರವು ನೀಡುವ
+          ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಅವರ ಹಾಸ್ಟೆಲ್ ವಸತಿಗಾಗಿ ಆರ್ಥಿಕ ನೆರವು ನೀಡುವ
           ಮೂಲಕ ಸಹಾಯ ಮಾಡುತ್ತದೆ. ಇದು ಅರ್ಹ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಹಣಕಾಸಿನ ನಿರ್ಬಂಧಗಳಿಲ್ಲದೆ
           ತಮ್ಮ ಅಧ್ಯಯನವನ್ನು ಮುಂದುವರಿಸಲು ಸಹಾಯ ಮಾಡುತ್ತದೆ.
         </li>
         <br />
         <li>
         <span className=" font-extrabold text-lg">ಕಟ್ಟಡ ನಿಧಿ: </span>ಕಟ್ಟಡ ನಿಧಿಗೆ ನೀಡುವ ಕೊಡುಗೆಗಳನ್ನು ಸಂಸ್ಥೆಯ ಮೂಲಸೌಕರ್ಯವನ್ನು
-          ಹೆಚ್ಚಿಸಲು ಬಳಸಲಾಗುತ್ತದೆ
+          ಹೆಚ್ಚಿಸಲು ಬಳಸಲಾಗುತ್ತದೆ.
         </li>
         <br />
         <li>
@@ -39,7 +39,7 @@ export default function ProgramTemplate() {
         <li>
         <span className=" font-extrabold text-lg">ಗ್ರಂಥಾಲಯ ನಿಧಿ: </span>ಗ್ರಂಥಾಲಯ ನಿಧಿಗೆ ನೀಡುವ ದೇಣಿಗೆಯನ್ನು ಹಾಸ್ಟೆಲ್ ಗ್ರಂಥಾಲಯಕ್ಕೆ
           ಹೊಸ ಪುಸ್ತಕಗಳು, ಶೈಕ್ಷಣಿಕ ಸಾಮಗ್ರಿಗಳು ಮತ್ತು ಸಂಪನ್ಮೂಲಗಳನ್ನು ಖರೀದಿಸಲು
-          ಬಳಸಲಾಗುತ್ತದೆ. ಇದು ವಿದ್ಯಾರ್ಥಿಗಳ ಕಲಿಕೆಯ ಅನುಭವಗಳನ್ನು ಶ್ರೀಮಂತಗೊಳಿಸುತ್ತದೆ.
+          ಬಳಸಲಾಗುತ್ತದೆ. 
         </li>
         <br />
         <li>
@@ -50,8 +50,8 @@ export default function ProgramTemplate() {
         <br />
 
        
-        <span className=" font-extrabold text-lg">ದಾನ ಮಾಡಿದ ಮೊತ್ತವನ್ನು ದಾನಿ ನಿರ್ದಿಷ್ಟಪಡಿಸಿದ ಉದ್ದೇಶಕ್ಕಾಗಿ ಪ್ರತ್ಯೇಕವಾಗಿ
-          ಹಂಚಿಕೆ ಮಾಡಲಾಗುತ್ತದೆ ಎಂಬುದನ್ನು ನೆನಪಿಡಿ.</span>
+        <span className=" font-extrabold text-lg">ದಾನ ಮಾಡಿದ ಮೊತ್ತವನ್ನು ದಾನಿಗಳು ನಿರ್ದಿಷ್ಟಪಡಿಸಿದ ಉದ್ದೇಶಕ್ಕಾಗಿ ಪ್ರತ್ಯೇಕವಾಗಿ
+        ಬಳಸಲಾಗುತ್ತದೆ.</span>
         
       </div>
     </>

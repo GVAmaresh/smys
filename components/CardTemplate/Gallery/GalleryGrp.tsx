@@ -5,11 +5,13 @@ import { useEffect, useState } from "react";
 
 import Data from "@/lib/types/Data";
 
+
 import Navbar from "@/components/Navbar/Navbar";
-import { AuthDetailsGDrive, getGalleryPageEnglish } from "@/firebase/helper";
+import { getGalleryPageEnglish, GetGalleryPhoto } from "@/firebase/helper";
 import { GetImages } from "@/lib/FetchDetails/Fetch";
 import { ImageConvert } from "@/lib/smys_details/Image_Conversion";
 import Loading from "@/components/Navbar/Loading";
+import Gallery from "@/app/gallery/page";
 
 export default function GalleryGrp() {
   const [data, setData] = useState<Data | null>(null);
@@ -32,8 +34,9 @@ export default function GalleryGrp() {
       try {
         const group = data?.Gallery; 
         if (group) {
-          const datas = await GetImages(group);
-          setNewData(datas);
+          // const datas = await GetImages(group);
+          const datas = await GetGalleryPhoto()
+          setNewData(datas?.Gallery);
         }
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -42,19 +45,19 @@ export default function GalleryGrp() {
   
     fetchData();
   }, [data]);
-  console.log(newData);
   return (
     <>
       {data?.Gallery ? (
-        <div className="container pb-10  ">
+        <div className=" pb-10">
           {!click && (
             <>
               <Navbar options={["Home", "About", "Events"]} />
-              <div className="mt-32 ml-5   ">
+              <div className="mt-32 ml-1 md:ml-5">
                 <Heading text={"Gallery"} />
               </div>
             </>
           )}
+          <div className="ml-1">
           <Grid
             sx={{ flexGrow: 1 }}
             container
@@ -65,11 +68,11 @@ export default function GalleryGrp() {
             <Grid item xs={10}>
               <Grid container justifyContent="center" spacing={2}>
                 {Object.values(newData).map((image, index) => (
-                  <Grid key={index} item xs={8} sm={4}>
+                  <Grid key={index} item xs={6} sm={6} md={4} lg={4}>
                     <CardMedia
                       component="img"
                       sx={{
-                        width: {xs: 600,md:"120%"} ,
+                        width: {xs: 800,md:"120%"} ,
                         height: { xs: 200, md: 400 },
                         borderRadius: 5 ,
                         marginLeft: { xs: "auto", md: 0 },
@@ -84,6 +87,7 @@ export default function GalleryGrp() {
               </Grid>
             </Grid>
           </Grid>
+          </div>
         </div>
       ) : (
         <div><Loading/></div>

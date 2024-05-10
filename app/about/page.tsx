@@ -6,15 +6,18 @@ import Satpantha from "@/components/CardTemplate/Satpantha/Satpantha";
 import Navbar from "@/components/Navbar/Navbar";
 import { Suspense, useEffect, useState } from "react";
 import Data from "@/lib/types/Data";
-import { getAboutPageEnglish } from "@/firebase/helper";
+import { getAboutPageEnglish, getHomePageEnglish } from "@/firebase/helper";
 import Loading from "@/components/Navbar/Loading";
 import FacilityTemplate from "@/components/CardTemplate/FacilityComp/FacilityTemplate";
 import ProgramTemplate from "@/components/CardTemplate/FacilityComp/ProgramTemplate";
 import { usePathname, useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
+import Contact from "@/components/CardTemplate/ContactUs/Contact";
+import Heading from "@/components/CardTemplate/Font/Heading";
 
 function AboutTemplate() {
   const [data, setData] = useState<Data | null>(null);
+  const [data2, setData2] = useState<Data | null>(null);
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const router = useRouter();
@@ -22,7 +25,6 @@ function AboutTemplate() {
   useEffect(() => {
     const url = `${pathname}?${searchParams}`;
     let pathId = url.split("=")[1];
-    console.log(pathId);
     if (pathId) {
       setTimeout(() => {
         const element = document.getElementById(pathId);
@@ -32,6 +34,13 @@ function AboutTemplate() {
       }, 500);
     }
   }, [pathname, searchParams]);
+  useEffect(() => {
+    getHomePageEnglish()
+      .then((data: any) => setData2(data))
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  }, []);
 
   useEffect(() => {
     getAboutPageEnglish()
@@ -42,7 +51,6 @@ function AboutTemplate() {
         console.error("Error:", err);
       });
   }, []);
-  console.log(data?.Satpanta);
 
   return (
     <>
@@ -71,6 +79,19 @@ function AboutTemplate() {
           </div>
           <div id="program" className="program">
             <ProgramTemplate />
+          </div>
+          <div className="">
+            {data2 && (
+              <>
+              <Heading text={"For Donations/Seva"} />
+              <Contact
+                add={data2.Address.add}
+                email={data2.Address.email}
+                phno={data2.Address.phno}
+                social={data2.Address.social}
+              />
+              </>
+            )}
           </div>
         </>
       )}

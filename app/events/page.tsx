@@ -6,7 +6,12 @@ import { useEffect, useState } from "react";
 import Data from "@/lib/types/Data";
 import { FetchDetails, GetImages } from "@/lib/FetchDetails/Fetch";
 import Link from "next/link";
-import { getEventPageEnglish } from "@/firebase/helper";
+import {
+  getEventPageEnglish,
+  GetHistoricalPhoto,
+  GetFacilityPhoto,
+  GetJnanaPhoto,
+} from "@/firebase/helper";
 import ImageSliding from "@/components/CardTemplate/Event/ImageSliding";
 import CarouselWithoutText from "@/components/CardTemplate/CarouselWithoutText/CarouselWithoutText";
 import Loading from "@/components/Navbar/Loading";
@@ -26,16 +31,9 @@ export default function Events() {
   const [data, setData] = useState<Data | null>(null);
 
   const [historical, setHistorical] = useState<ImageArrayprops>();
-  const [annual, setAnnual] = useState<ImageArrayprops>();
+  const [facility, setFacility] = useState<ImageArrayprops>();
 
-  const [jyana, setJyana] = useState<
-    | {
-        photo: string;
-        title?: string;
-        description?: string;
-      }[]
-    | null
-  >(null);
+  const [jyana, setJyana] = useState<ImageArrayprops>();
 
   useEffect(() => {
     getEventPageEnglish()
@@ -51,19 +49,18 @@ export default function Events() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const group1 = data?.Events.Historical;
-        console.log("Group1 = ", group1);
-        if (group1) {
-          const datas = await GetImages(group1);
 
-          setHistorical({ photo: datas });
-        }
-        const group2 = data?.Events.Annual;
-        if (group2) {
-          const datas = await GetImages(group2);
-          console.log("photos = = ", datas);
-          setAnnual({ photo: datas });
-        }
+          // const datas = await GetImages(group1);
+          const datas1 = await GetHistoricalPhoto();
+          setHistorical({ photo: datas1?.Historical });
+
+          // const datas = await GetImages(group2);
+          const datas2 = await GetFacilityPhoto();
+          setFacility({ photo: datas2?.Facility });
+
+          const datas3 = await GetJnanaPhoto();
+          setJyana({ photo: datas3?.Jnana });
+        
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -76,27 +73,28 @@ export default function Events() {
     <>
       <div>
         {data?.Events ? (
-          <div className="mt-36">
+          <div className="mt-10 md:mt-36">
             <Navbar options={["Home", "About", "Gallery"]} />
-            <div className="mt-16"></div>
+            {/* <div className="mt-16"></div> */}
             <Heading text="Historical Events" />
-            <div className="mt-8 mb-32">
+            <div className="mt-2 md:mt-8 mb-2 sm:mb-1 md:mb-1 ml-16 ">
               {historical && (
                 <CarouselWithoutText imageList={historical.photo} />
               )}
             </div>
 
-            {/* <Heading text="Annual Events" />
+            {/* <Heading text="Facility Events" />
             <div className="mt-8 mb-32">
-              {annual && <CarouselWithoutText imageList={annual.photo} />}
+              {facility && <CarouselWithoutText imageList={facility.photo} />}
             </div> */}
             <Heading text="Jnanabharathi" />
-            <div className="mt-8 mb-32">
+            <div className="mt-2 mb-8 md:mb-1">
               <div
                 className="m-10 md:m-64 md:mt-10 md:mb-10 p-10 mt-10 mb-10 border-2"
                 style={{
                   borderBottomRightRadius: "50px",
                   borderTopLeftRadius: "50px",
+                  textAlign: "justify",
                 }}
               >
                 ಶ್ರೀ ಮಾಧ್ವ ಯುವಕ ಸಂಘವು
@@ -108,9 +106,12 @@ export default function Events() {
                 ಬ್ರಾಹ್ಮಣ ಯುವಕರು, ಸಂಧ್ಯಾವಂದನೆ, ಸಾಮಾಜಿಕ ಜವಾಬ್ದಾರಿಗೆ ಸಂಬಂಧಿಸಿದ
                 ಕಾರ್ಯಾಗಾರಗಳಾಗಿವೆ.
               </div>
-              {jyana && <CarouselWithoutText details={jyana} />}
+              <div className="ml-16">
+              {jyana && (
+                <CarouselWithoutText imageList={jyana.photo} />
+              )}
+              </div>
             </div>
-
           </div>
         ) : (
           <div>

@@ -6,7 +6,6 @@ import Heading from "../Font/Heading";
 import { CommitteeMember } from "@/lib/types/Data";
 import { ImageConvert } from "@/lib/smys_details/Image_Conversion";
 function Committe(committe: { committe: { [key: string]: CommitteeMember } }) {
-  console.log(committe)
   return (
     <>
       <div className="container mt-20 ">

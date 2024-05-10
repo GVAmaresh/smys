@@ -35,7 +35,7 @@ function NewEventContent() {
     fetchData();
   }, []);
 
-  if (!["Historical", "Annual", "Jyana"].includes(title)) {
+  if (!["Historical", "Facility", "Jyana"].includes(title)) {
     return (
       <>
         <div>Page intentionally not found</div>

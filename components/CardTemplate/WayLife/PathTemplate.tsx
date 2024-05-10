@@ -35,15 +35,16 @@ export default function FounderMember({
         borderTopLeftRadius: '70px',
         borderBottomRightRadius: '70px',
         overflow: 'hidden',
+        textAlign: 'justify',
       }}
     >
       <CardMedia
         component='img'
         sx={{
           width: { xs: '100%', md: 400 },
-          height: { xs: 300, sm: 400, md: 250, lg: 350 },
+          height: { xs: 300, sm: 400, md: 680, lg: 360 },
         }}
-        image={wayLife.src}
+        image={"/images/way_life.jpg"}
         alt='Founder image'
       />
       {/* . ಈ ಪ್ರಸ್ತಾಪದ ಫಲಿತಾಂಶವಾಗಿ, .  .. */}

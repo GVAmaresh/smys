@@ -12,19 +12,19 @@ export default function MainProps() {
         >
           <ListItem>
             <Link href="/about?path=facility">
-              <PropsTemplate name="Facility" image="/images/pipleline.jpeg" />
+              <PropsTemplate name="" image="/images/facility2.png" />
             </Link>
           </ListItem>
           <ListItem>
             <Link href="/about?path=program">
-              <PropsTemplate name="Program" image="/images/pipleline.jpeg" />
+              <PropsTemplate name="" image="/images/program.png" />
             </Link>
           </ListItem>
           <ListItem>
             <Link href="/about?path=satpanta">
               <PropsTemplate
-                name="Student Form"
-                image="/images/pipleline.jpeg"
+                name=""
+                image="/images/satpantha.png"
               />
             </Link>
           </ListItem>

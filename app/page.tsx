@@ -6,27 +6,37 @@ import Path from "@/components/CardTemplate/WayLife/Path";
 import Header from "@/components/Header/Header";
 import Navbar from "@/components/Navbar/Navbar";
 import { useEffect, useState } from "react";
-import { getHomePageEnglish } from "@/firebase/helper";
+import { getHomePageEnglish, UpdatePhoto } from "@/firebase/helper";
 import Data from "@/lib/types/Data";
-import {PresidentVision, WardenMessage} from "@/components/CardTemplate/Vision/PresidentVision";
+import {
+  PresidentVision,
+  WardenMessage,
+} from "@/components/CardTemplate/Vision/PresidentVision";
 import SecretaryVision from "@/components/CardTemplate/Vision/SecretaryDesk";
 import Loading from "@/components/Navbar/Loading";
 import { useFirebase } from "@/firebase/firebase";
 import MainProps from "@/components/CardTemplate/Props/MainProps";
 import Title from "@/components/CardTemplate/Title/title";
+import { GetFacilityPhoto } from "@/firebase/helper";
+import Heading from "@/components/CardTemplate/Font/Heading";
 
 export default function Home() {
   const [data, setData] = useState<Data | null>(null);
   useFirebase();
   useEffect(() => {
-    console.log("running her")
     getHomePageEnglish()
       .then((data: any) => setData(data))
       .catch((error) => {
         console.error("Error:", error);
       });
   }, []);
-  console.log(data);
+
+  useEffect(() => {
+    GetFacilityPhoto().then(data=>{});
+  }, []);
+  useEffect(() => {
+    UpdatePhoto().then((data) => {});
+  });
 
   return (
     <div className="w-fit md:w-fit">
@@ -45,13 +55,14 @@ export default function Home() {
             description2={data.Intro.Madhwa.description}
           />
           <Title />
-          
+
           <Path data={data.Journey} />
           <MainProps />
           <PresidentVision data={data.Journey} />
           <SecretaryVision data={data.Journey} />
           <WardenMessage data={data.Journey} />
           {/* <Activity /> */}
+          <Heading text={"Contact us"} />
           <Contact
             add={data.Address.add}
             email={data.Address.email}

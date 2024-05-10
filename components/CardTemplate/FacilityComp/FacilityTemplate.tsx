@@ -1,5 +1,5 @@
 "use client";
-import { getEventPageEnglish } from "@/firebase/helper";
+import { getEventPageEnglish, GetFacilityPhoto } from "@/firebase/helper";
 import { GetImages } from "@/lib/FetchDetails/Fetch";
 import Data from "@/lib/types/Data";
 import { useEffect, useState } from "react";
@@ -22,12 +22,9 @@ export default function FacilityTemplate() {
     getEventPageEnglish()
       .then(async (data: any) => {
         setData(data);
-        const group1 = data?.Events.Annual;
-        console.log("Group1 = ", group1);
-        if (group1) {
-          const datas = await GetImages(group1);
-          setHistorical({ photo: datas });
-        }
+        // const datas = await GetImages(group1);
+        const datas = await GetFacilityPhoto();
+        setHistorical({ photo: datas?.Facility });
       })
       .catch((err) => {
         console.error("Error:", err);
@@ -38,16 +35,16 @@ export default function FacilityTemplate() {
       <div className="">
         {data?.Events ? (
           <>
-            <div className="mt-36">
+            <div className="mt-1">
               {/* <Navbar options={["Home", "About", "Gallery"]} /> */}
-              <div className="mt-16"></div>
+              {/* <div className="mt-12"></div> */}
               <Heading text="Facility" />
-              <div className="mt-8 mb-8">
+              <div className=" mt-2 md:mt-8 mb-8 ml-20">
                 {historical && (
                   <CarouselWithoutText imageList={historical.photo} />
                 )}
               </div>
-              
+
               <div
                 className="m-10 md:m-64 md:mt-10 md:mb-10 p-10 mt-10 mb-10 border-2"
                 style={{
@@ -55,7 +52,9 @@ export default function FacilityTemplate() {
                   borderTopLeftRadius: "50px",
                 }}
               >
-                <div className=" font-extrabold text-2xl">Facility Offered:</div>
+                <div className=" font-extrabold text-2xl">
+                  Facility Offered:
+                </div>
                 <Grid
                   sx={{ flexGrow: 1 }}
                   container
@@ -73,10 +72,9 @@ export default function FacilityTemplate() {
                         "Library ",
                         "Frequent Seminars",
                         "Security and Maintainance",
-                        "Cultural Environment"
+                        "Cultural Environment",
                       ].map((item, index) => (
                         <Grid key={index} item xs={9} sm={6} md={6}>
-
                           <FounderMember
                             name={item}
                             age={""}

@@ -31,8 +31,8 @@ interface JyanaEvent {
 
 interface Event {
   Historical: string;
-  Annual: string;
-  Jyana: { [key: string]: JyanaEvent };
+  Facility: string;
+  Jyana: string;
 }
 
 export interface SatpantaMember {

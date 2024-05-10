@@ -14,6 +14,7 @@ export default function Satpantha(satpanta: {
           style={{
             borderBottomRightRadius: "50px",
             borderTopLeftRadius: "50px",
+            textAlign: "justify",
           }}
         >
           ಸತ್ಪಂಥ ವಿದ್ಯಾರ್ಥಿ ಒಕ್ಕೂಟವನ್ನು 1952 ರಲ್ಲಿ ಸ್ಥಾಪಿಸಲಾಯಿತು. ಇದು ಶ್ರೀ ಮಾಧ್ವ
@@ -21,7 +22,7 @@ export default function Satpantha(satpanta: {
           ವಹಿಸುತ್ತದೆ. ಸತ್ಪಂಥ ವಿದ್ಯಾರ್ಥಿಗಳ ಒಕ್ಕೂಟವು ಒಕ್ಕೂಟದ ಒಟ್ಟಾರೆ
           ಕಾರ್ಯನಿರ್ವಹಣೆಯನ್ನು ಮೇಲ್ವಿಚಾರಣೆ ಮಾಡುವ ಪ್ರಧಾನ ಕಾರ್ಯದರ್ಶಿಯನ್ನು ಒಳಗೊಂಡಿದೆ.
           ಇದು ಆಹಾರ, ಸಾಂಸ್ಕೃತಿಕ, ಗ್ರಂಥಾಲಯ, ನಿರ್ವಹಣೆ ಮತ್ತು ಕ್ರೀಡಾ ಉಸ್ತುವಾರಿಗಳನ್ನು
-          ಸಹ ಒಳಗೊಂಡಿದೆ. 2023-24 ನೇ ಸಾಲಿನ ಸತ್ಪಂಥ ವಿದ್ಯಾರ್ಥಿ ಸಂಘವು ಈ ಕೆಳಗಿನಂತಿದೆ:-
+          ಸಹ ಒಳಗೊಂಡಿದೆ. <br /><br /> 2023-24 ನೇ ಸಾಲಿನ ಸತ್ಪಂಥ ವಿದ್ಯಾರ್ಥಿ ಸಂಘವು ಈ ಕೆಳಗಿನಂತಿದೆ:-
         </div>
         <Grid
           sx={{ flexGrow: 1 }}
@@ -29,6 +30,7 @@ export default function Satpantha(satpanta: {
           spacing={2}
           justifyContent="center"
           marginTop={5}
+        
         >
           <Grid item xs={10}>
             <Grid container justifyContent="center" spacing={4}>

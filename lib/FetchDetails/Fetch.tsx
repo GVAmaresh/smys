@@ -6,6 +6,7 @@ import { ID_URL } from "../smys_details/ID_URL";
 //   : "http://localhost:3000/api";
 
 const URL = "https://hostel-backend-nwey.onrender.com/api"
+// const URL = "http://localhost:3000/api";
 
 export const FetchDetails = async (): Promise<any> => {
   try {
@@ -51,9 +52,6 @@ export const DownloadPhoto = async (): Promise<any> => {
 
 export const GetImages = async (url: string): Promise<any> => {
   try {
-
-
-
     const response = await fetch(`${URL}/getImages`, {
         method: 'POST',
         headers: {

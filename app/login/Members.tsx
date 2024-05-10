@@ -43,7 +43,6 @@ interface CommitteProps {
 }
 
 export const Committe = ({ handleChange, Committe }: CommitteProps) => {
-  console.log(Committe);
   return (
     <>
       <Heading text={"Committe"} />

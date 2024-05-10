@@ -41,7 +41,6 @@ const CarouselWithoutText = ({ details, imageList }: SlideProps) => {
     descriptions = imageList.map((detail) => "");
     slides = Array.from(Array(imageList.length).keys());
   }
-  console.log("NEW IMAGES = ", images);
   return (
     <>
       <Carousel

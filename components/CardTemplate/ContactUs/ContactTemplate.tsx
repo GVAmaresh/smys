@@ -33,7 +33,7 @@ export default function ContactTemplate({
 
           <div className="w-full md:w-1/2 h-40 md:h-80">
             <div className="flex justify-center">
-              <LocationOnIcon />
+              {/* <LocationOnIcon /> */}
             </div>
             <div className="text-center text-gray-500 text-2xl pt-6 font-bold">
               <div>Address</div>
@@ -45,7 +45,7 @@ export default function ContactTemplate({
 
           <div className="w-full md:w-1/2 h-40 md:h-80">
             <div className="flex justify-center">
-              <EmailIcon />
+              {/* <EmailIcon /> */}
             </div>
             <div className="text-center text-gray-500 text-2xl pt-6 font-bold">
               <div>Email</div>
@@ -88,13 +88,13 @@ export default function ContactTemplate({
           </div>
           <div className="w-full md:w-1/2 h-60  lg:h-80 ">
             <div className="flex justify-center">
-            <FaPeopleLine />
+            {/* <FaPeopleLine /> */}
             </div>
             <div className="text-center pt-6 text-gray-500 text-2xl font-bold">
               <div>Connect us</div>
             </div>
             <div className="text-center text-white text-sm p-1 pt-4 ">
-              <div className="flex flex-row justify-center">
+              <div className="flex flex-row justify-center gap-3">
                 <div className="">
                   <Link
                     href={social[0]}

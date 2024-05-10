@@ -80,7 +80,7 @@ function Navbar({ options }: { options: Array<string> }) {
 
               <Image
                 className="hidden md:flex"
-                src="/logo.jpg"
+                src="/images/logo2.png"
                 alt="hh"
                 height={50}
                 width={50}
@@ -91,7 +91,8 @@ function Navbar({ options }: { options: Array<string> }) {
                 component="a"
                 href="#app-bar-with-responsive-menu"
                 sx={{
-                  mr: 2,
+                  mr: 4,
+                  ml:4,
                   fontFamily: "monospace",
                   fontWeight: 700,
                   letterSpacing: ".3rem",
@@ -155,7 +156,7 @@ function Navbar({ options }: { options: Array<string> }) {
               {/* <FiAlignLeft style={{ display: (window.innerWidth < 768) ? "none" : "flex", marginRight: 1 }} />  */}
               <Image
                 className="flex md:hidden"
-                src="/logo.jpg"
+                src="/images/logo2.png"
                 alt="img"
                 height={40}
                 width={40}
@@ -166,7 +167,8 @@ function Navbar({ options }: { options: Array<string> }) {
                 component="a"
                 href="#app-bar-with-responsive-menu"
                 sx={{
-                  mr: 2,
+                  mr: 4,
+                  ml: 4,
                   display: { xs: "flex", md: "none" },
                   flexGrow: 1,
                   fontFamily: "monospace",
@@ -181,6 +183,7 @@ function Navbar({ options }: { options: Array<string> }) {
               <Box
                 sx={{
                   flexGrow: 1,
+
                   display: {
                     xs: "none",
                     md: "flex",

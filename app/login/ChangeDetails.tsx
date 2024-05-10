@@ -29,7 +29,7 @@ interface Intro {
 }
 
 interface Events {
-  Annual?: object[];
+  Facility?: object[];
   Historical: object[];
   Jyana: object[];
 }
@@ -115,7 +115,7 @@ const initialOpenState: State = {
     hostel: '',
   },
   Events: {
-    Annual: [{}],
+    Facility: [{}],
     Historical: [{}],
     Jyana: [{}],
   },
