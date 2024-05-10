@@ -8,7 +8,7 @@ import { ImageConvert } from "@/lib/smys_details/Image_Conversion";
 function Committe(committe: { committe: { [key: string]: CommitteeMember } }) {
   return (
     <>
-      <div className="container mt-20 ">
+      <div className="mt-20 ">
         <Heading text="Executive Committee" />
         <Grid
           sx={{ flexGrow: 1 }}

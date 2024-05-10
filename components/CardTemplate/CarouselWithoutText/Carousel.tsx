@@ -47,7 +47,7 @@ const Carousel = (props: PropType) => {
                 <CardMedia
                   component="img"
                   sx={{
-                    width: { xs: 300, md: "150%" },
+                    width: { xs: 900, sm:600, md: "250%", lg:"200%"},
                     height: { xs: 200, md: 300 },
                     borderRadius: { xs: 5, md: 5 },
                     marginLeft: { xs: "auto", md: 0 },

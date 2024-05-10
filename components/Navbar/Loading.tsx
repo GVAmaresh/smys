@@ -1,5 +1,6 @@
 import Image from "next/image";
-import loading from "@/components/Navbar/final_loading_gif.gif";
+// import loading from "@/components/Navbar/final_loading_gif.gif";
+import loading from "@/public/final_loading2.gif"
 import man from "@/public/images/man.jpg"
 
 export default function Loading() {
