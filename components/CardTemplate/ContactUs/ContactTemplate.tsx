@@ -29,7 +29,7 @@ export default function ContactTemplate({
 {/* this is first only imformation*/}
       <div className="w-full md:w-full lg:w-1/2 h-160 bg-gray-900 rounded-l-lg">
 
-        <div className="flex md:flex-row mt-1 flex-col justify-center sm:flex-col w-full">
+        <div className="flex md:flex-row mt-10 md:mt-20 flex-col justify-center sm:flex-col w-full">
 
           <div className="w-full md:w-1/2 h-40 md:h-80">
             <div className="flex justify-center">

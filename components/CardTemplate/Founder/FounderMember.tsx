@@ -7,7 +7,7 @@ import { CardActionArea } from "@mui/material";
 import { CommitteeMember } from "@/lib/types/Data";
 export default function FounderMember(data: CommitteeMember) {
   return (
-    <div className=" font-medium  text-xs  md:text-lg ">
+    <div className="font-medium text-base md:text-lg ">
       {" "}
       <li>{data.name}</li>
     </div>

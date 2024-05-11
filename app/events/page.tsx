@@ -72,12 +72,12 @@ export default function Events() {
   return (
     <>
       <div>
-        {data?.Events ? (
-          <div className="mt-10 md:mt-36">
+        {data?.Events ? ( 
+          <div className="mt-10 md:mt-36 md:mr-44">
             <Navbar options={["Home", "About", "Gallery"]} />
             {/* <div className="mt-16"></div> */}
             <Heading text="Historical Events" />
-            <div className="mt-2 md:mt-8 mb-2 sm:mb-1 md:mb-1 ml-16 ">
+            <div className="mt-2 md:mt-8 mb-2 sm:mb-1 md:mb-1">
               {historical && (
                 <CarouselWithoutText imageList={historical.photo} />
               )}
@@ -90,7 +90,7 @@ export default function Events() {
             <Heading text="Jnanabharathi" />
             <div className="mt-2 mb-8 md:mb-1">
               <div
-                className="m-10 md:m-64 md:mt-10 md:mb-10 p-10 mt-10 mb-10 border-2"
+                className="m-10 mb-1 md:m-6 md:ml-60 md:mr-40 md:mt-10 md:mb-10 p-10 mt-10 border-2"
                 style={{
                   borderBottomRightRadius: "50px",
                   borderTopLeftRadius: "50px",
@@ -106,7 +106,7 @@ export default function Events() {
                 ಬ್ರಾಹ್ಮಣ ಯುವಕರು, ಸಂಧ್ಯಾವಂದನೆ, ಸಾಮಾಜಿಕ ಜವಾಬ್ದಾರಿಗೆ ಸಂಬಂಧಿಸಿದ
                 ಕಾರ್ಯಾಗಾರಗಳಾಗಿವೆ.
               </div>
-              <div className="ml-16">
+              <div className="">
               {jyana && (
                 <CarouselWithoutText imageList={jyana.photo} />
               )}

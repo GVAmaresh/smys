@@ -9,7 +9,7 @@ interface ContactPros {
 }
 export default function Contact({ add, email, phno, social }: ContactPros) {
   return (
-    <div className="mb-20 contact" id="contact">
+    <div className="mb-20  contact" id="contact">
       
       <ContactTemplate add={add} email={email} phno={phno} social={social} />
     </div>

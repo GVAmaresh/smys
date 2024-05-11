@@ -39,14 +39,14 @@ export default function FacilityTemplate() {
               {/* <Navbar options={["Home", "About", "Gallery"]} /> */}
               {/* <div className="mt-12"></div> */}
               <Heading text="Facility" />
-              <div className=" mt-2 md:mt-8 mb-8 ml-20">
+              <div className="mt-2 md:mt-8 mb-8">
                 {historical && (
                   <CarouselWithoutText imageList={historical.photo} />
                 )}
               </div>
 
               <div
-                className="m-10 md:m-64 md:mt-10 md:mb-10 p-10 mt-10 mb-10 border-2"
+                className="mt-10 md:mt-10 md:mb-10 p-10 mb-10 border-2"
                 style={{
                   borderBottomRightRadius: "50px",
                   borderTopLeftRadius: "50px",
