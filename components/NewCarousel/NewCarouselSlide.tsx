@@ -19,6 +19,7 @@ export default function NewCarousel(props: PropType) {
     setOpen(true);
   };
   return (
+    <>
     <div className=" flex overflow-x-auto newscroll" id="style-2">
       <div className="ml-32 flex">
         {Array.from(Array(images.length).keys()).map((index) => (
@@ -67,6 +68,7 @@ export default function NewCarousel(props: PropType) {
         </Fade>
       </Modal>
     </div>
+    </>
   );
 }
 
