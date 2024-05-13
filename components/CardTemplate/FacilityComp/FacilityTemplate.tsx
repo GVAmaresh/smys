@@ -5,11 +5,11 @@ import Data from "@/lib/types/Data";
 import { useEffect, useState } from "react";
 import { Navbar } from "react-bootstrap";
 import Heading from "../Font/Heading";
-import CarouselWithoutText from "../CarouselWithoutText/CarouselWithoutText";
 import Loading from "@/components/Navbar/Loading";
 import { Grid } from "@mui/material";
 import FounderMember from "@/components/CardTemplate/Founder/FounderMember";
 import CommitteMember from "../Committe/CommitteMember";
+import NewCarousel from "@/components/NewCarousel/NewCarouselSlide";
 
 interface ImageArrayprops {
   photo: string[];
@@ -40,8 +40,9 @@ export default function FacilityTemplate() {
               {/* <div className="mt-12"></div> */}
               <Heading text="Facility" />
               <div className="mt-2 md:mt-8 mb-8">
+
                 {historical && (
-                  <CarouselWithoutText imageList={historical.photo} />
+                  <NewCarousel images={historical.photo} />
                 )}
               </div>
 

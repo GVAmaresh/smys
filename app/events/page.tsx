@@ -13,10 +13,10 @@ import {
   GetJnanaPhoto,
 } from "@/firebase/helper";
 import ImageSliding from "@/components/CardTemplate/Event/ImageSliding";
-import CarouselWithoutText from "@/components/CardTemplate/CarouselWithoutText/CarouselWithoutText";
 import Loading from "@/components/Navbar/Loading";
 import FacilityTemplate from "@/components/CardTemplate/FacilityComp/FacilityTemplate";
 import ProgramTemplate from "@/components/CardTemplate/FacilityComp/ProgramTemplate";
+import NewCarousel from "@/components/NewCarousel/NewCarouselSlide";
 
 interface ImageSlidingProps {
   photo?: string;
@@ -78,15 +78,9 @@ export default function Events() {
             {/* <div className="mt-16"></div> */}
             <Heading text="Historical Events" />
             <div className="mt-2 md:mt-8 mb-2 sm:mb-1 md:mb-1">
-              {historical && (
-                <CarouselWithoutText imageList={historical.photo} />
-              )}
+              {historical&&<NewCarousel images={historical?.photo}/>}
             </div>
 
-            {/* <Heading text="Facility Events" />
-            <div className="mt-8 mb-32">
-              {facility && <CarouselWithoutText imageList={facility.photo} />}
-            </div> */}
             <Heading text="Jnanabharathi" />
             <div className="mt-2 mb-8 md:mb-1">
               <div
@@ -106,10 +100,8 @@ export default function Events() {
                 ಬ್ರಾಹ್ಮಣ ಯುವಕರು, ಸಂಧ್ಯಾವಂದನೆ, ಸಾಮಾಜಿಕ ಜವಾಬ್ದಾರಿಗೆ ಸಂಬಂಧಿಸಿದ
                 ಕಾರ್ಯಾಗಾರಗಳಾಗಿವೆ.
               </div>
-              <div className="">
-              {jyana && (
-                <CarouselWithoutText imageList={jyana.photo} />
-              )}
+              <div className="mb-20">
+              {jyana&&<NewCarousel images={jyana?.photo}/>}
               </div>
             </div>
           </div>
