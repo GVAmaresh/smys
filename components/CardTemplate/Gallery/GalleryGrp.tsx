@@ -1,5 +1,5 @@
 "use client";
-import { CardMedia, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import Heading from "../Font/Heading";
 import { useEffect, useState } from "react";
 
@@ -16,11 +16,23 @@ import { ImageConvert } from "@/lib/smys_details/Image_Conversion";
 import Loading from "@/components/Navbar/Loading";
 import Gallery from "@/app/gallery/page";
 import Contact from "../ContactUs/Contact";
+import { Modal, Backdrop, Fade, CardMedia } from "@mui/material";
 
 export default function GalleryGrp() {
   const [data, setData] = useState<Data | null>(null);
   const [clickIndex, setClickIndex] = useState<number | null>(null);
   const [click, setClick] = useState<boolean>(false);
+  const [open, setOpen] = useState(false);
+  const [image, setImage] = useState("");
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const handleImage = (value: any) => {
+    setImage(value);
+    setOpen(true);
+  };
   const [newData, setNewData] = useState<string[]>([]);
 
   const [data2, setData2] = useState<Data | null>(null);
@@ -60,7 +72,9 @@ export default function GalleryGrp() {
   }, [data]);
   return (
     <>
+
       {data?.Gallery ? (
+        <div className="">
         <div className=" pb-10">
           {!click && (
             <>
@@ -91,6 +105,7 @@ export default function GalleryGrp() {
                           marginLeft: { xs: "auto", md: 0 },
                           marginRight: { xs: "auto", md: 0 },
                         }}
+                        onClick={() => handleImage(image)}
                         image={ImageConvert(image) || ""}
                         alt="Founder image"
                       />
@@ -109,6 +124,32 @@ export default function GalleryGrp() {
               social={data2.Address.social}
             />}
           </div>
+        </div>
+        <Modal
+        className="flex items-center justify-center"
+        open={open}
+        onClose={handleClose}
+        closeAfterTransition
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 500,
+        }}
+      >
+        <Fade in={open} timeout={500}>
+          <CardMedia
+            component="img"
+            image={ImageConvert(image)}
+            alt=""
+            className="img"
+            sx={{
+              width:"80%",
+              borderRadius: { xs: 5, md: 5 },
+              marginLeft: { xs: "auto", md: 0 },
+              marginRight: { xs: "auto", md: 0 },
+            }}
+          />
+        </Fade>
+      </Modal>
         </div>
       ) : (
         <div>
