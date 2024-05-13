@@ -57,7 +57,8 @@ export default function NewCarousel(props: PropType) {
             alt=""
             className="img"
             sx={{
-              width:"80%",
+              height:{md:"80%",lg:"60%"},
+              width:{md:"80%", lg:"80%"},
               borderRadius: { xs: 5, md: 5 },
               marginLeft: { xs: "auto", md: 0 },
               marginRight: { xs: "auto", md: 0 },

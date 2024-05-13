@@ -126,7 +126,7 @@ export default function GalleryGrp() {
           </div>
         </div>
         <Modal
-        className="flex items-center justify-center"
+        className="flex items-center justify-center p-10"
         open={open}
         onClose={handleClose}
         closeAfterTransition
@@ -142,7 +142,8 @@ export default function GalleryGrp() {
             alt=""
             className="img"
             sx={{
-              width:"80%",
+              width:{md:"80%", lg:"60%"},
+              
               borderRadius: { xs: 5, md: 5 },
               marginLeft: { xs: "auto", md: 0 },
               marginRight: { xs: "auto", md: 0 },
