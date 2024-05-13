@@ -19,7 +19,7 @@ export default function NewCarousel(props: PropType) {
     setOpen(true);
   };
   return (
-    <div className=" flex overflow-x-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-transparent">
+    <div className=" flex overflow-x-auto newscroll" id="style-2">
       <div className="ml-32 flex">
         {Array.from(Array(images.length).keys()).map((index) => (
           <div className=" flex-shrink-0 mr-4" key={index}>
