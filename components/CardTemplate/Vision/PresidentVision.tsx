@@ -37,7 +37,7 @@ export function PresidentTemplate({
         marginTop: 3,
         textAlign:"justify",
       }}
-      className="border-2"
+      className="border-2 bg-white"
       style={{
         borderBottomRightRadius: "50px",
         borderTopLeftRadius: "50px",
@@ -68,7 +68,7 @@ export function PresidentVision({ data }: { data: Journey }) {
   return (
     <>
       <>
-        <div className="mt-10 sm:mt-10 md:mt-10 lg:mt-10">
+        <div className="mt-10 sm:mt-10 md:mt-10 lg:mt-10 ">
           <Heading text={"President's Vision"} />
           <div className="flex flex-col items-center">
             <PresidentTemplate

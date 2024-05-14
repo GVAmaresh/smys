@@ -9,7 +9,8 @@ export default function Path({ data }: { data: Journey }) {
     <>
         <div className="bg-gray-300 h-px  w-full mt-56"></div>
       <div className="mt-10 sm:mt-12  md:mt-10 lg:mt-10">
-        <Heading text={"ನಡೆದು ಬಂದ ಹಾದಿ...."} isLine={false}/>
+        {/* <Heading text={"ನಡೆದು ಬಂದ ಹಾದಿ...."} isLine={false}/> */}
+        <Heading text={"Journey of SMYS...."} isLine={false}/>
         <div className="flex flex-col items-center">
           <PathTemplate
             name={""}

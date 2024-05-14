@@ -40,7 +40,7 @@ export default function FounderMember({
         component="img"
         sx={{
           width: { xs: "100%", md: 400 },
-          height: { xs: 300, sm: 400, md: 680, lg: 360 },
+          height: { xs: 300, sm: 400, md: 800, lg: 440 },
         }}
         image={"/images/way_life.jpg"}
         alt="Founder image"
