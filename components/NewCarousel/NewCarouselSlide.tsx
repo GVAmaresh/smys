@@ -42,31 +42,34 @@ export default function NewCarousel(props: PropType) {
         ))}
       </div>
       <Modal
-        className="flex items-center justify-center"
-        open={open}
-        onClose={handleClose}
-        closeAfterTransition
-        BackdropComponent={Backdrop}
-        BackdropProps={{
-          timeout: 500,
-        }}
-      >
-        <Fade in={open} timeout={500}>
-          <CardMedia
-            component="img"
-            image={ImageConvert(image)}
-            alt=""
-            className="img"
-            sx={{
-              height:{md:"80%",lg:"60%"},
-              width:{md:"80%", lg:"80%"},
-              borderRadius: { xs: 5, md: 5 },
-              marginLeft: { xs: "auto", md: 0 },
-              marginRight: { xs: "auto", md: 0 },
-            }}
-          />
-        </Fade>
-      </Modal>
+  className="flex items-center justify-center"
+  open={open}
+  onClose={handleClose}
+  closeAfterTransition
+  BackdropComponent={Backdrop}
+  BackdropProps={{
+    timeout: 500,
+  }}
+>
+  <Fade in={open} timeout={500}>
+    <CardMedia
+      component="img"
+      image={ImageConvert(image)}
+      alt=""
+      className="img"
+      sx={{
+        height: { md: "80%", lg: "60%" },
+        width: { md: "80%", lg: "80%" },
+        borderRadius: { xs: 5, md: 5 },
+        marginLeft: { xs: "auto", md: 0 },
+        marginRight: { xs: "auto", md: 0 },
+        // Ensure the image is not dimmed
+        filter: 'brightness(100%)'
+      }}
+    />
+  </Fade>
+</Modal>
+
     </div>
     </>
   );

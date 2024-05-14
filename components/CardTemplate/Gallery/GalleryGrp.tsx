@@ -147,6 +147,7 @@ export default function GalleryGrp() {
               borderRadius: { xs: 5, md: 5 },
               marginLeft: { xs: "auto", md: 0 },
               marginRight: { xs: "auto", md: 0 },
+              filter: 'brightness(100%)'
             }}
           />
         </Fade>
