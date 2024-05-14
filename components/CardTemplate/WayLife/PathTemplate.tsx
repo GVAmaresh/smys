@@ -1,16 +1,16 @@
-import * as React from 'react';
-import { useTheme } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import Typography from '@mui/material/Typography';
-import { CardMedia } from '@mui/material';
-import wayLife from '@/public/images/way_life.jpg'
+import * as React from "react";
+import { useTheme } from "@mui/material/styles";
+import Box from "@mui/material/Box";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import Typography from "@mui/material/Typography";
+import { CardMedia } from "@mui/material";
+import wayLife from "@/public/images/way_life.jpg";
 
 interface FounderMemberProp {
   name: string;
-  age?:string
-  
+  age?: string;
+
   image?: string;
   description?: string;
   phone?: string;
@@ -22,85 +22,96 @@ export default function FounderMember({
   image,
   description,
 }: FounderMemberProp) {
-  const theme = useTheme();
-  console.log('this is image', image);
   return (
     <Card
       sx={{
-        display: 'flex',
-        flexDirection: { xs: 'column', md: 'row' },
-        width: { sx: '73%', xs: '80%' },
-        height: '100%',
+        display: "flex",
+        flexDirection: { xs: "column", md: "row" },
+        width: { sx: "73%", xs: "80%" },
+        height: "100%",
         marginTop: 3,
-        borderTopLeftRadius: '70px',
-        borderBottomRightRadius: '70px',
-        overflow: 'hidden',
-        textAlign: 'justify',
+        borderTopLeftRadius: "70px",
+        borderBottomRightRadius: "70px",
+        overflow: "hidden",
+        textAlign: "justify",
       }}
     >
       <CardMedia
-        component='img'
+        component="img"
         sx={{
-          width: { xs: '100%', md: 400 },
+          width: { xs: "100%", md: 400 },
           height: { xs: 300, sm: 400, md: 680, lg: 360 },
         }}
         image={"/images/way_life.jpg"}
-        alt='Founder image'
+        alt="Founder image"
       />
       {/* . ಈ ಪ್ರಸ್ತಾಪದ ಫಲಿತಾಂಶವಾಗಿ, .  .. */}
-      <Box sx={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
-        <CardContent>
-          <div className='font-bold text-4xl'>{name}</div>
-          <div className='font-small text-sm'>
+      <div className="ml-6">
+        <Box sx={{ display: "flex", flexDirection: "column", flex: 1 }}>
+          <CardContent>
+            <div className="font-bold text-4xl">{name}</div>
+            <div className="font-small text-sm">
+              <ul className="list-outside list-disc">
+                <div className="pt-1 font-extrabold text-lg"></div>
+                <li className="pt-1">
+                  Established in 1945 under the leadership of Sri Subodha
+                  Ramarayaru, the student hostel was founded to provide free
+                  accommodation for Brahmin students coming to Bangalore for
+                  higher education.
+                </li>
+                <li className="pt-1">
+                  Over the years, it has grown into a facility that accommodates
+                  thousands of students, nurturing them into contributing
+                  members of society.Currently, the hostel provides free
+                  accommodation facilities to around 110 students.
+                </li>
+                <li className="pt-1">
+                  The need for such a hostel was discussed at the Madhwa Youth
+                  Conference in 1944.
+                </li>
+                <li className="pt-1">
+                  The Sri Madhwa Yuva Sangha was formally established in 1945,
+                  with activities commencing in 1946.
+                </li>
 
-            <ul className='list-outside hover:list-inside list-disc'>
-              <div className='pt-1 font-extrabold text-lg'></div>
-              <li className='pt-1'>
-                1945 ರಂದು ದಿವಂಗತ ಶ್ರೀ ಸುಬೋಧ ರಾಮರಾಯರ ನೇತೃತ್ವದಲ್ಲಿ ಸ್ಥಾಪನೆಗೊಂಡಿತು.
-                ಉನ್ನತ ವ್ಯಾಸಂಗಕ್ಕಾಗಿ ಬೆಂಗಳೂರಿಗೆ ಬರುವ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಉಚಿತ ವಸತಿ
-                ಸೌಕರ್ಯವನ್ನು ನೀಡುವ ಸಲುವಾಗಿ ಆರಂಭಗೊಂಡ ಈ ವಿದ್ಯಾರ್ಥಿ ನಿಲಯವು, ಇಂದಿಗೆ
-                ಸಾವಿರಾರು ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಆಶ್ರಯದಾಯಕವಾಗುತ್ತಿದೆ. ಸಮಾಜಕ್ಕೆ ಉತ್ತಮ
-                ಸತ್ಪ್ರಜೆಗಳನ್ನು ನೀಡಿದೆ. ಪ್ರಸ್ತುತ 110 ವಿದ್ಯಾರ್ಥಿಗಳು ಇಲ್ಲಿ ಉಚಿತ
-                ವಸತಿ ಸೌಕರ್ಯವನ್ನು ಪಡೆಯುತ್ತಿದ್ದಾರೆ.
-              </li>
-              <li className='pt-1'>
-              1944 ರಲ್ಲಿ, ಮಾಧ್ವ ಯುವ ಸಮ್ಮೇಳನದಲ್ಲಿ ವಿದ್ಯಾರ್ಥಿ ನಿಲಯದ ಅನಿವಾರ್ಯತೆಯ ಬಗ್ಗೆ ಪ್ರಸ್ತಾಪ.
-              </li>
-              <li className='pt-1'>
-                1945 ರಲ್ಲಿ ಶ್ರೀ ಮಾಧ್ವ ಯುವಕ ಸಂಘದ ಸ್ಥಾಪನೆ. 1946 ರಲ್ಲಿ
-                ಸಂಘದ ಕಾರ್ಯ ಆರಂಭವಾಯಿತು.
-              </li>
-              <li className='pt-1'>
-              1948 ರಲ್ಲಿ ಮೈಸೂರು ಸರ್ಕಾರದ ಅಡಿಯಲ್ಲಿ
-                ಅಧಿಕೃತವಾಗಿ ನೋಂದಾಯಿಸಲ್ಪಟ್ಟಿತು.
-              </li>
-              
-              <li className='pt-1'>
-                1950 ರಲ್ಲಿ ಸಂಘದ ಪ್ರಥಮ ನಿಬಂಧನೆ ರಚನೆಯಾಯಿತು . 1952 ರಲ್ಲಿ ಸತ್ಪಂಥ
-                ವಿದ್ಯಾರ್ಥಿ ಒಕ್ಕೂಟದ ಸ್ಥಾಪನೆ.
-              </li>
-              <li className='pt-1'>
-              1996 ರಲ್ಲಿ ಶ್ರೀ ಮಾಧ್ವ ಎಜುಕೇಶನ್ ಅಂಡ್
-                ಚಾರಿಟಬಲ್ ಟ್ರಸ್ಟ್ ಸ್ಥಾಪನೆಯಾಯಿತು.
-              </li>
-                
-              <li className='pt-1'>
-                2002 ರಲ್ಲಿ ಸುವರ್ಣ ಸತ್ಪಂಥ ಸಮಾರಂಭ ಮತ್ತು 2015 ರಲ್ಲಿ ವಜ್ರ ಮಹೋತ್ಸವ
-                ಕಟ್ಟಡದ ನವೀಕರಣ ಮತ್ತು ಬಯಲು ರಂಗ ಮಂದಿರ ಲೋಕಾರ್ಪಣೆ ನಡೆಯಿತು.
-              </li>
-              <li className='pt-1'>
-              2021 ರಲ್ಲಿ ಸಂಘವು ಅಮೃತ ಮಹೋತ್ಸವವನ್ನು ಆಚರಿಸುತ್ತಿದೆ.
-              </li>
-              
-              <li className='pt-1'>
-                ಈ ಚರಿತ್ರೆಯು ಶ್ರೀ ಮಾಧ್ವ ಯುವಕ ಸಂಘದ ಏಳು ದಶಕಗಳ ಸೇವೆಯ ಸಾರಾಂಶವಾಗಿದೆ. ಈ
-                ಸಂಘವು ಯುವಜನರ ಧಾರ್ಮಿಕ, ಸಾಂಸ್ಕೃತಿಕ ಮತ್ತು ಶೈಕ್ಷಣಿಕ ಉನ್ನತಿಗಾಗಿ
-                ಶ್ರಮಿಸುತ್ತಾ ಬಂದಿದೆ.
-              </li>
-            </ul>
-          </div>
-        </CardContent>
-      </Box>
+                <li className="pt-1">
+                  It was officially registered under the Mysore government in
+                  1948.
+                </li>
+                <li className="pt-1">
+                  The first constitution of the Sangha was drafted in 1950.
+                </li>
+
+                <li className="pt-1">
+                  The Satpantha Student Union was established in 1952.
+                </li>
+                <li className="pt-1">
+                  The Sri Madhwa Education and Charitable Trust was formed in
+                  1996.
+                </li>
+
+                <li className="pt-1">
+                  Major renovations were carried out in 2002, including the
+                  construction of the Golden Jubilee Auditorium.
+                </li>
+                <li className="pt-1">
+                  The Bayalu Ranga Mandira( open auditorium) was inaugurated in
+                  2015.
+                </li>
+                <li className="pt-1">
+                  The Sangha continues to celebrate the Amritha Mahotsava in
+                  2021.
+                </li>
+                <div className="pt-3 font-medium">
+                  Over its seven decades of existence, the Sri Madhwa Yuvaka
+                  Sangha has focused on the spiritual, cultural, and educational
+                  development of Brahmin youth.
+                </div>
+              </ul>
+            </div>
+          </CardContent>
+        </Box>
+      </div>
     </Card>
   );
 }

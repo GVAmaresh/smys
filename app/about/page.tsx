@@ -14,6 +14,7 @@ import { usePathname, useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
 import Contact from "@/components/CardTemplate/ContactUs/Contact";
 import Heading from "@/components/CardTemplate/Font/Heading";
+import CopyRight from "@/components/CardTemplate/CopyRight/CopyRight";
 
 function AboutTemplate() {
   const [data, setData] = useState<Data | null>(null);
@@ -93,6 +94,7 @@ function AboutTemplate() {
               </>
             )}
           </div>
+          <CopyRight/>
         </>
       )}
     </>

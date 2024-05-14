@@ -5,7 +5,6 @@ import PathTemplate from "./PathTemplate";
 import { Journey } from "@/lib/types/Data";
 
 export default function Path({ data }: { data: Journey }) {
-  console.log(ImageConvert(data.photo));
   return (
     <>
         <div className="bg-gray-300 h-px  w-full mt-56"></div>

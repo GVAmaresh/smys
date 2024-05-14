@@ -17,7 +17,6 @@ export const FetchDetails = async (): Promise<any> => {
       },
     });
     console.log("Tryning to fetch details")
-    console.log(response);
     if (!response.ok) {
       throw new Error("Failed to fetch details");
     }
@@ -60,7 +59,6 @@ export const GetImages = async (url: string): Promise<any> => {
         body: JSON.stringify({ url: url })
     });
     const data = await response.json();
-    console.log(data.data)
     return data.data;
   } catch (error) {
     console.error("Error:", error);

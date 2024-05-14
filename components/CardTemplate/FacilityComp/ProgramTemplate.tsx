@@ -3,56 +3,61 @@ import Heading from "../Font/Heading";
 export default function ProgramTemplate() {
   return (
     <>
-      <Heading text="ಸೇವೆಗಳು" />
+      <Heading text="Programs" />
       <div
         className="m-10 md:m-64 md:mt-10 md:mb-10 p-10 mt-10 mb-10 border-2"
         style={{
           borderBottomRightRadius: "50px",
           borderTopLeftRadius: "50px",
-          textAlign:"justify",
+          textAlign: "justify",
         }}
       >
         <li>
-          <span className=" font-extrabold text-lg">ಅನ್ನಪೂರ್ಣ ನಿಧಿ: </span>ಈ ನಿಧಿಯು ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಪೌಷ್ಟಿಕ ಆಹಾರವನ್ನು ಒದಗಿಸಲು
-          ಸಂಪನ್ಮೂಲಗಳನ್ನು ಸಂಗ್ರಹಿಸುವ ಗುರಿಯನ್ನು ಹೊಂದಿದೆ.
+          <span className=" font-extrabold text-lg">Annapoorna Fund: </span>This
+          fund aims to gather funds to provide nutritious meals to students.
         </li>
         <br />
         <li>
-        <span className=" font-extrabold text-lg">ವಿದ್ಯಾರ್ಥಿವೇತನ ನಿಧಿ: </span>ವಿದ್ಯಾರ್ಥಿವೇತನ ನಿಧಿಯು ಆರ್ಥಿಕವಾಗಿ ಅಗತ್ಯವಿರುವ
-          ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಅವರ ಹಾಸ್ಟೆಲ್ ವಸತಿಗಾಗಿ ಆರ್ಥಿಕ ನೆರವು ನೀಡುವ
-          ಮೂಲಕ ಸಹಾಯ ಮಾಡುತ್ತದೆ. ಇದು ಅರ್ಹ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಹಣಕಾಸಿನ ನಿರ್ಬಂಧಗಳಿಲ್ಲದೆ
-          ತಮ್ಮ ಅಧ್ಯಯನವನ್ನು ಮುಂದುವರಿಸಲು ಸಹಾಯ ಮಾಡುತ್ತದೆ.
+          <span className=" font-extrabold text-lg">
+            Student Scholarship Fund:{" "}
+          </span>
+          This assists economically needy students with financial support for
+          their hostel accommodation, enabling them to continue their stay
+          without financial constraints.
         </li>
         <br />
         <li>
-        <span className=" font-extrabold text-lg">ಕಟ್ಟಡ ನಿಧಿ: </span>ಕಟ್ಟಡ ನಿಧಿಗೆ ನೀಡುವ ಕೊಡುಗೆಗಳನ್ನು ಸಂಸ್ಥೆಯ ಮೂಲಸೌಕರ್ಯವನ್ನು
-          ಹೆಚ್ಚಿಸಲು ಬಳಸಲಾಗುತ್ತದೆ.
+          <span className=" font-extrabold text-lg">Building Fund: </span>
+          Contributions to the Building Fund are used to improve institutional
+          infrastructure.
         </li>
         <br />
         <li>
-        <span className=" font-extrabold text-lg">ವಿಶೇಷ ಆಹಾರ ಪ್ರಾಯೋಜಕತ್ವ: </span>ನಿರ್ದಿಷ್ಟ ದಿನಗಳಲ್ಲಿ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ವಿಶೇಷ
-          ಊಟವನ್ನು ಪ್ರಾಯೋಜಿಸುವುದು ಅವರು ತಮ್ಮ ನಿಯಮಿತ ಊಟವನ್ನು ಮೀರಿ ಪೌಷ್ಟಿಕ ಆಹಾರವನ್ನು
-          ಪಡೆಯುತ್ತಾರೆ ಎಂದು ಖಚಿತಪಡಿಸುತ್ತದೆ. ಇದು ವಿಶೇಷ ಆಚರಣೆಗಳು, ಹಬ್ಬಗಳು ಅಥವಾ ಇತರ
-          ಸಂದರ್ಭಗಳಲ್ಲಿ ಇರಬಹುದು.
+          <span className=" font-extrabold text-lg">
+            Special Meal Sponsorship:
+          </span>
+          This sponsorship ensures that students receive special meals on
+          specific occasions.
         </li>
         <br />
         <li>
-        <span className=" font-extrabold text-lg">ಗ್ರಂಥಾಲಯ ನಿಧಿ: </span>ಗ್ರಂಥಾಲಯ ನಿಧಿಗೆ ನೀಡುವ ದೇಣಿಗೆಯನ್ನು ಹಾಸ್ಟೆಲ್ ಗ್ರಂಥಾಲಯಕ್ಕೆ
-          ಹೊಸ ಪುಸ್ತಕಗಳು, ಶೈಕ್ಷಣಿಕ ಸಾಮಗ್ರಿಗಳು ಮತ್ತು ಸಂಪನ್ಮೂಲಗಳನ್ನು ಖರೀದಿಸಲು
-          ಬಳಸಲಾಗುತ್ತದೆ. 
+          <span className=" font-extrabold text-lg">Library Fund:</span>
+          Donations to the Library Fund are utilized to procure new books,
+          educational materials, and resources for the hostel library.
         </li>
         <br />
         <li>
-        <span className=" font-extrabold text-lg">ಇತರ ದೇಣಿಗೆಗಳು: </span>ಈ ವರ್ಗವು ದಾನಿಗಳಿಗೆ ಸಂಸ್ಥೆಯೊಳಗಿನ ಯಾವುದೇ ನಿರ್ದಿಷ್ಟ ಕಾರಣ
-          ಅಥವಾ ಅಗತ್ಯಕ್ಕೆ ಕೊಡುಗೆ ನೀಡಲು ಅನುವು ಮಾಡಿಕೊಡುತ್ತದೆ. ಇದು ಉಪಕರಣಗಳು, ಪಠ್ಯೇತರ
-          ಚಟುವಟಿಕೆಗಳು ಅಥವಾ ಇತರ ಅಗತ್ಯ ಅವಶ್ಯಕತೆಗಳನ್ನು ಒಳಗೊಂಡಿರಬಹುದು.
+          <span className=" font-extrabold text-lg">Other Donations: </span>This
+          category allows donors to contribute towards specific needs or
+          purposes within the institution, such as equipment, extracurricular
+          activities, or other essential requirements.
         </li>
         <br />
 
-       
-        <span className=" font-extrabold text-lg">ದಾನ ಮಾಡಿದ ಮೊತ್ತವನ್ನು ದಾನಿಗಳು ನಿರ್ದಿಷ್ಟಪಡಿಸಿದ ಉದ್ದೇಶಕ್ಕಾಗಿ ಪ್ರತ್ಯೇಕವಾಗಿ
-        ಬಳಸಲಾಗುತ್ತದೆ.</span>
-        
+        <span className=" font-extrabold text-lg">
+          The total amount donated is specifically allocated based on the
+          intentions specified by the donors.
+        </span>
       </div>
     </>
   );

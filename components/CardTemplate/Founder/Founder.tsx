@@ -25,18 +25,20 @@ export default function Founder({ founders }: FounderProps) {
     <div className="mt-20">
       <Heading text="Founders" />
       <div
-        className="m-10 sm:m-10 md:m-20 md:mt-10 md:mb-10 p-10 mt-10 mb-10 border-2 kannadaText"
+        className="m-10 sm:m-10 md:m-20 md:mt-10 md:mb-10 p-10 mt-10 mb-10 border-2 "
         style={{
           borderBottomRightRadius: "50px",
           borderTopLeftRadius: "50px",
           textAlign: "justify",
-          fontFamily: "Kannada Font", 
+          fontFamily: "",
         }}
       >
-        ಶ್ರೀ ಮಾಧ್ವ ಯುವಕ ಸಂಘವು ತನ್ನ ಏಳು ದಶಕಗಳ ಯಶಸ್ವಿ ಪಯಣದಲ್ಲಿ ಅನೇಕ ಮಹನೀಯರ
-        ಅಮೂಲ್ಯ ಕೊಡುಗೆಗಳನ್ನು ಪಡೆದಿದೆ. ಈ ಸಂಘವು ಸ್ಥಾಪನೆಯಾಗಿದ್ದು, ಬೆಳವಣಿಗೆ ಮತ್ತು
-        ಉನ್ನತಿಗೆ ಶ್ರಮಿಸಿದ ಪ್ರಮುಖ ಕಾರಣ ಪುರುಷರ ಕೊಡುಗೆಗಳನ್ನು ಮತ್ತು ಅವರ ಸಂಕಲ್ಪಗಳನ್ನು
-        ಮುಂದುವರಿಸಬೇಕು.
+        Sri Madhwa Yuvaka Sangha has received invaluable contributions from
+        numerous eminent individuals during its successful journey of seven
+        decades. Founded in 1945, this association has progressed and flourished
+        due to the contributions and dedication of key figures, and it must
+        continue to uphold their contributions and ideals for further growth and
+        advancement.
         <Grid
           sx={{ flexGrow: 1 }}
           container

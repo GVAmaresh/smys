@@ -17,12 +17,15 @@ export default function Satpantha(satpanta: {
             textAlign: "justify",
           }}
         >
-          ಸತ್ಪಂಥ ವಿದ್ಯಾರ್ಥಿ ಒಕ್ಕೂಟವನ್ನು 1952 ರಲ್ಲಿ ಸ್ಥಾಪಿಸಲಾಯಿತು. ಇದು ಶ್ರೀ ಮಾಧ್ವ
-          ಯುವಕ ಸಂಘದ ವಿದ್ಯಾರ್ಥಿಗಳಲ್ಲಿ ನಾಯಕತ್ವ ಗುಣಗಳನ್ನು ಬೆಳೆಸುವಲ್ಲಿ ಪ್ರಮುಖ ಪಾತ್ರ
-          ವಹಿಸುತ್ತದೆ. ಸತ್ಪಂಥ ವಿದ್ಯಾರ್ಥಿ ಒಕ್ಕೂಟದ ಒಟ್ಟಾರೆ
-          ಕಾರ್ಯನಿರ್ವಹಣೆಯನ್ನು ಮೇಲ್ವಿಚಾರಣೆ ಮಾಡುವ ಪ್ರಧಾನ ಕಾರ್ಯದರ್ಶಿಯನ್ನು ಒಳಗೊಂಡಿದ್ದು
-          ಆಹಾರ, ಸಾಂಸ್ಕೃತಿಕ, ಗ್ರಂಥಾಲಯ, ಆಂತರಿಕ ನಿರ್ವಹಣೆ ಮತ್ತು ಕ್ರೀಡಾ ಉಸ್ತುವಾರಿಗಳನ್ನು
-          ಸಹ ಒಳಗೊಂಡಿದೆ. <br /><br /> 2023-24 ನೇ ಸಾಲಿನ ಸತ್ಪಂಥ ವಿದ್ಯಾರ್ಥಿ ಒಕ್ಕೂಟವು ಈ ಕೆಳಗಿನಂತಿದೆ:-
+          Satpantha Students Union was established in 1952 to cultivate
+          leadership and self confidence qualities among the students of Sri
+          Madhwa Yuvaka Sangha. It plays a significant role in overseeing the
+          overall functioning of the student body, including administration of
+          food, cultural activities, library management, internal management,
+          and sports facilities.
+          <br />
+          <br /> For the academic year 2023-24, Satpantha Students Union
+          comprises the following:-
         </div>
         <Grid
           sx={{ flexGrow: 1 }}
@@ -30,7 +33,6 @@ export default function Satpantha(satpanta: {
           spacing={2}
           justifyContent="center"
           marginTop={5}
-        
         >
           <Grid item xs={10}>
             <Grid container justifyContent="center" spacing={4}>

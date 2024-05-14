@@ -17,6 +17,7 @@ import Loading from "@/components/Navbar/Loading";
 import FacilityTemplate from "@/components/CardTemplate/FacilityComp/FacilityTemplate";
 import ProgramTemplate from "@/components/CardTemplate/FacilityComp/ProgramTemplate";
 import NewCarousel from "@/components/NewCarousel/NewCarouselSlide";
+import CopyRight from "@/components/CardTemplate/CopyRight/CopyRight";
 
 interface ImageSlidingProps {
   photo?: string;
@@ -49,18 +50,16 @@ export default function Events() {
   useEffect(() => {
     const fetchData = async () => {
       try {
+        // const datas = await GetImages(group1);
+        const datas1 = await GetHistoricalPhoto();
+        setHistorical({ photo: datas1?.Historical });
 
-          // const datas = await GetImages(group1);
-          const datas1 = await GetHistoricalPhoto();
-          setHistorical({ photo: datas1?.Historical });
+        // const datas = await GetImages(group2);
+        const datas2 = await GetFacilityPhoto();
+        setFacility({ photo: datas2?.Facility });
 
-          // const datas = await GetImages(group2);
-          const datas2 = await GetFacilityPhoto();
-          setFacility({ photo: datas2?.Facility });
-
-          const datas3 = await GetJnanaPhoto();
-          setJyana({ photo: datas3?.Jnana });
-        
+        const datas3 = await GetJnanaPhoto();
+        setJyana({ photo: datas3?.Jnana });
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -72,13 +71,13 @@ export default function Events() {
   return (
     <>
       <div>
-        {data?.Events ? ( 
-          <div className="mt-10 md:mt-36 md:mr-44">
+        {data?.Events ? (
+          <div className="mt-10 md:mt-36 ">
             <Navbar options={["Home", "About", "Gallery"]} />
             {/* <div className="mt-16"></div> */}
             <Heading text="Historical Events" />
             <div className="mt-2 md:mt-8 mb-2 sm:mb-1 md:mb-1">
-              {historical&&<NewCarousel images={historical?.photo}/>}
+              {historical && <NewCarousel images={historical?.photo} />}
             </div>
 
             <Heading text="Jnanabharathi" />
@@ -91,19 +90,21 @@ export default function Events() {
                   textAlign: "justify",
                 }}
               >
-                ಶ್ರೀ ಮಾಧ್ವ ಯುವಕ ಸಂಘವು
-                <span className=" font-extrabold"> ಜ್ಞಾನ ಭಾರತೀ</span> ಎಂಬ
-                ಕಾರ್ಯಕ್ರಮದಲ್ಲಿ ವಿಚಾರ ಸಂಕಿರಣವನ್ನು ತನ್ನ ಅಮೃತ ಮಹೋತ್ಸವದ ಶುಭ
-                ಸಂದರ್ಭದಲ್ಲಿ ಆರಂಭವಾಯಿತು. ಹಲವಾರು ಪಠ್ಯೇತರ ಮತ್ತು ಸಾಮಾಜಿಕ
-                ವಿಷಯಗಳು ಅರಿವು ಹಾಗೂ ಆಸಕ್ತಿ ಮೂಡಿಸುವ ಜ್ಞಾನ ಸತ್ರದ ಒಂದು ಪ್ರಯೋಗ.
-                ಜ್ಞಾನಭಾರತಿ ವಿಷಯಗಳು ಸಾಮಾನ್ಯವಾಗಿ ಸನಾತನ ಧರ್ಮ, ಸಾತ್ವಿಕ ಆಹಾರ,
-                ಬ್ರಾಹ್ಮಣ ಯುವಕರು, ಸಂಧ್ಯಾವಂದನೆ, ಸಾಮಾಜಿಕ ಜವಾಬ್ದಾರಿಗೆ ಸಂಬಂಧಿಸಿದ
-                ಕಾರ್ಯಾಗಾರಗಳಾಗಿವೆ.
+                Madhwa Yuvaka Sangha launched the
+                <span className=" font-extrabold"> Jnana Bharati </span>
+                program as part of its Amrita Mahotsava to foster intellectual
+                exploration and extracurricular engagement. This initiative
+                features study sessions and discussions covering topics such as
+                Sanatana Dharma, sattvic diet, the potential of Brahmin youth,
+                Sandhyavandanam and social responsibilities,
+                all aimed at cultivating knowledge and interest among
+                participants.
               </div>
-              <div className="mb-20">
-              {jyana&&<NewCarousel images={jyana?.photo}/>}
+              <div className="mb-20 mt-10">
+                {jyana && <NewCarousel images={jyana?.photo} />}
               </div>
             </div>
+            <CopyRight/>
           </div>
         ) : (
           <div>

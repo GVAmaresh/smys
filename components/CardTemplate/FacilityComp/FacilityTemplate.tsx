@@ -47,13 +47,13 @@ export default function FacilityTemplate() {
               </div>
 
               <div
-                className="mt-10 md:mt-10 md:mb-10 p-10 mb-10 border-2"
+                className="mt-10 md:mt-10 md:mb-10 p-1 lg:p-10 mb-10 border-2 m-10 lg:m-32"
                 style={{
                   borderBottomRightRadius: "50px",
                   borderTopLeftRadius: "50px",
                 }}
               >
-                <div className=" font-extrabold text-2xl">
+                <div className=" font-extrabold text-2xl pt-6 pl-6 ">
                   Facility Offered:
                 </div>
                 <Grid
@@ -70,11 +70,11 @@ export default function FacilityTemplate() {
                         "Free Accomodation",
                         "Furnished Rooms",
                         "Scholarship Assistances",
-                        "Sports Services",
+                        "Sports Club",
                         "Library ",
-                        "Frequent Seminars",
+                        "Guest Seminars",
                         "Security and Maintainance",
-                        "Cultural Environment",
+                        "Spiritual Environment",
                         "Uninterrupted Power Supply",
                         "Open Auditorium",
                         "Hygienic Kitchen",

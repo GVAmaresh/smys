@@ -1,3 +1,4 @@
+import CopyRight from "@/components/CardTemplate/CopyRight/CopyRight";
 import Heading from "@/components/CardTemplate/Font/Heading";
 import GalleryGrp from "@/components/CardTemplate/Gallery/GalleryGrp";
 import Header from "@/components/Header/Header";
@@ -10,6 +11,7 @@ export default function Gallery() {
   return (
     <>
       <GalleryGrp/>
+      <CopyRight/>
     </>
   );
 }

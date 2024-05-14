@@ -6,10 +6,8 @@ export const getHomePageEnglish = async () => {
   const dbRef = ref(db, "english");
   const snapshot = await get(dbRef);
   if (snapshot.exists()) {
-    console.log(snapshot.val());
     const { Address, Committe, Events, Founders, Intro, Journey, Hostel } =
       snapshot.val();
-    console.log(Address);
     return { Address, Committe, Events, Founders, Intro, Journey, Hostel };
   } else {
     alert("error");
@@ -20,9 +18,7 @@ export const getEventPageEnglish = async () => {
   const dbRef = ref(db, "english");
   const snapshot = await get(dbRef);
   if (snapshot.exists()) {
-    console.log(snapshot.val());
     const { Events } = snapshot.val();
-    console.log(Events);
     return { Events };
   } else {
     alert("error");
@@ -33,7 +29,6 @@ export const getAboutPageEnglish = async () => {
   const dbRef = ref(db, "english");
   const snapshot = await get(dbRef);
   if (snapshot.exists()) {
-    console.log(snapshot.val());
     const { Founders, Committe, Satpanta } = snapshot.val();
     return { Founders, Committe, Satpanta };
   } else {
@@ -45,7 +40,6 @@ export const getGalleryPageEnglish = async () => {
   const dbRef = ref(db, "english");
   const snapshot = await get(dbRef);
   if (snapshot.exists()) {
-    console.log(snapshot.val());
     const { Gallery } = snapshot.val();
     return { Gallery };
   } else {
@@ -96,7 +90,7 @@ export const fetchDataFromFirebase = async () => {
       Gallery: Object.values(Gallery),
       Satpanta: Object.values(Satpanta),
     };
-    console.log(structuredData);
+
     return structuredData;
   } else {
     alert("Error fetching data from Firebase");
@@ -131,10 +125,10 @@ export const UpdatePhoto = async () => {
   if (snapshot.exists()) {
     const data = snapshot.val();
     const { Events, Gallery } = data;
-    const HistoricalNew = Events.Historical
-    const Jnana = Events.Jnana
-    const GalleryNew = Gallery
-    const Facility = Events.Facility
+    const HistoricalNew = Events.Historical;
+    const Jnana = Events.Jnana;
+    const GalleryNew = Gallery;
+    const Facility = Events.Facility;
 
     const albumRef = ref(db, "english/Album");
     const albumSnapshot = await get(albumRef);
@@ -146,7 +140,7 @@ export const UpdatePhoto = async () => {
         Gallery: albumGallery,
         Historical: albumHistorical,
       } = albumData;
-      console.log("This is new Data = ",Facility, Jnana, HistoricalNew, GalleryNew);
+
 
       // { ******************************  Historical ******************************* *** }
 
@@ -155,12 +149,12 @@ export const UpdatePhoto = async () => {
         const imagesToAdd = [];
         const imagesToDelete = [];
         imagesData.forEach((image) => {
-          if (!albumHistorical.includes(image)) {
+          if (!albumHistorical?.includes(image)) {
             imagesToAdd.push(image);
           }
         });
         albumHistorical.forEach((image) => {
-          if (!imagesData.includes(image)) {
+          if (!imagesData?.includes(image)) {
             imagesToDelete.push(image);
           }
         });
@@ -202,12 +196,12 @@ export const UpdatePhoto = async () => {
         const imagesToAdd = [];
         const imagesToDelete = [];
         imagesData.forEach((image) => {
-          if (!albumJnana.includes(image)) {
+          if (!albumJnana?.includes(image)) {
             imagesToAdd.push(image);
           }
         });
         albumJnana.forEach((image) => {
-          if (!imagesData.includes(image)) {
+          if (!imagesData?.includes(image)) {
             imagesToDelete.push(image);
           }
         });
@@ -248,12 +242,12 @@ export const UpdatePhoto = async () => {
         const imagesToAdd = [];
         const imagesToDelete = [];
         imagesData.forEach((image) => {
-          if (!albumGallery.includes(image)) {
+          if (!albumGallery?.includes(image)) {
             imagesToAdd.push(image);
           }
         });
         albumGallery.forEach((image) => {
-          if (!imagesData.includes(image)) {
+          if (!imagesData?.includes(image)) {
             imagesToDelete.push(image);
           }
         });
@@ -294,12 +288,12 @@ export const UpdatePhoto = async () => {
         const imagesToAdd = [];
         const imagesToDelete = [];
         imagesData.forEach((image) => {
-          if (!albumFacility.includes(image)) {
+          if (!albumFacility?.includes(image)) {
             imagesToAdd.push(image);
           }
         });
         albumFacility.forEach((image) => {
-          if (!imagesData.includes(image)) {
+          if (!imagesData?.includes(image)) {
             imagesToDelete.push(image);
           }
         });

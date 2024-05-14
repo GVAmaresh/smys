@@ -19,6 +19,7 @@ import MainProps from "@/components/CardTemplate/Props/MainProps";
 import Title from "@/components/CardTemplate/Title/title";
 import { GetFacilityPhoto } from "@/firebase/helper";
 import Heading from "@/components/CardTemplate/Font/Heading";
+import CopyRight from "@/components/CardTemplate/CopyRight/CopyRight";
 
 export default function Home() {
   useFirebase();
@@ -69,6 +70,7 @@ export default function Home() {
             phno={data.Address.phno}
             social={data.Address.social}
           />
+          <CopyRight/>
         </>
       )}
     </div>

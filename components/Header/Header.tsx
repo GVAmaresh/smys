@@ -18,7 +18,6 @@ export default function Header({
   description1: string;
   description2: string;
 }) {
-  console.log("img ", ImageConvert(img));
   return (
     <>
       <Card sx={{ maxWidth: "100%", height: "90vh", overflow: "hidden" }}>
