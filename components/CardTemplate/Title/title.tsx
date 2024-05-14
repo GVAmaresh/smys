@@ -6,6 +6,9 @@ export default function Title() {
       <div className=" text-amber-950 mt-20 md:mt-8 text-2xl sm:text-4xl md:text-4xl lg:text-6xl flex justify-center font-extrabold">
         Sri Madhwa Yuvaka Sangha(R.)
       </div>
+      <div className=" text-amber-950 mt-20 md:mt-8 text-2xl sm:text-4xl md:text-4xl lg:text-6xl flex justify-center font-extrabold">
+        Boy's Hostel
+      </div>
       <div className=" mt-8 text-lg sm:text-2xl md:text-2xl lg:text-5xl flex justify-center font-extrabold">
       ಶ್ರೀ ಮಾಧ್ವ ಯುವಕ ಸಂಘ(ನೋಂ)
       </div>

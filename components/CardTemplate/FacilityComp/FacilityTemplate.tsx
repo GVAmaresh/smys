@@ -67,13 +67,20 @@ export default function FacilityTemplate() {
                     <Grid container justifyContent="center" spacing={4}>
                       {[
                         "Subsidised Boarding",
+                        "Free Accomodation",
                         "Furnished Rooms",
                         "Scholarship Assistances",
-                        "Sports Club",
+                        "Sports Services",
                         "Library ",
                         "Frequent Seminars",
                         "Security and Maintainance",
                         "Cultural Environment",
+                        "Uninterrupted Power Supply",
+                        "Open Auditorium",
+                        "Hygienic Kitchen",
+                        "CCTV Surveillance",
+                        "Purified Drinking Water"
+
                       ].map((item, index) => (
                         <Grid key={index} item xs={9} sm={6} md={6}>
                           <FounderMember

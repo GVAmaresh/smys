@@ -3,7 +3,7 @@ import Heading from "../Font/Heading";
 export default function ProgramTemplate() {
   return (
     <>
-      <Heading text="Programs" />
+      <Heading text="ಸೇವೆಗಳು" />
       <div
         className="m-10 md:m-64 md:mt-10 md:mb-10 p-10 mt-10 mb-10 border-2"
         style={{
@@ -32,7 +32,7 @@ export default function ProgramTemplate() {
         <li>
         <span className=" font-extrabold text-lg">ವಿಶೇಷ ಆಹಾರ ಪ್ರಾಯೋಜಕತ್ವ: </span>ನಿರ್ದಿಷ್ಟ ದಿನಗಳಲ್ಲಿ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ವಿಶೇಷ
           ಊಟವನ್ನು ಪ್ರಾಯೋಜಿಸುವುದು ಅವರು ತಮ್ಮ ನಿಯಮಿತ ಊಟವನ್ನು ಮೀರಿ ಪೌಷ್ಟಿಕ ಆಹಾರವನ್ನು
-          ಪಡೆಯುತ್ತಾರೆ ಎಂದು ಖಚಿತಪಡಿಸುತ್ತದೆ. ಇದು ಆಚರಣೆಗಳು, ಹಬ್ಬಗಳು ಅಥವಾ ಇತರ
+          ಪಡೆಯುತ್ತಾರೆ ಎಂದು ಖಚಿತಪಡಿಸುತ್ತದೆ. ಇದು ವಿಶೇಷ ಆಚರಣೆಗಳು, ಹಬ್ಬಗಳು ಅಥವಾ ಇತರ
           ಸಂದರ್ಭಗಳಲ್ಲಿ ಇರಬಹುದು.
         </li>
         <br />
