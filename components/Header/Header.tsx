@@ -24,7 +24,7 @@ export default function Header({
 
         <CardMedia
           sx={{ width: "100%", height: "100%" }}
-          image={ImageConvert(img)}
+          image={"/images/hostel.jpg"}
           title=""
         />
       </Card>
