@@ -10,7 +10,7 @@ export default function Satpantha(satpanta: {
       <div className="container mt-20 mb-20">
         <Heading text="Satpantha Students' Union" />
         <div
-          className="m-10 md:m-64 md:mt-10 md:mb-10 p-10 mt-10 mb-10 border-2"
+          className="m-10 md:ml-20 md:mt-10 md:mb-10 p-10 mt-10 mb-10 border-2"
           style={{
             borderBottomRightRadius: "50px",
             borderTopLeftRadius: "50px",

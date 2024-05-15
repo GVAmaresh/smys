@@ -18,7 +18,9 @@ export const FetchDetails = async (): Promise<any> => {
     });
     console.log("Tryning to fetch details")
     if (!response.ok) {
-      throw new Error("Failed to fetch details");
+      // throw new Error("Failed to fetch details");
+      console.error("Failed to fetch details")
+      return null;
     }
     const data = await response.json();
     return data;
@@ -38,7 +40,9 @@ export const DownloadPhoto = async (): Promise<any> => {
     });
 
     if (!response.ok) {
-      throw new Error("Failed to fetch details");
+      // throw new Error("Failed to fetch details");
+      console.error("Failed to fetch details")
+      return null;
     }
 
     const data = await response.json();

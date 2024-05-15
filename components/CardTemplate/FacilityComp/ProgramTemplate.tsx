@@ -13,23 +13,21 @@ export default function ProgramTemplate() {
         }}
       >
         <li>
-          <span className=" font-extrabold text-lg">Annapoorna Fund: </span>This
+          <span className=" font-extrabold text-lg">Annapoorna Nidhi: </span>This
           fund aims to gather funds to provide nutritious meals to students.
         </li>
         <br />
         <li>
           <span className=" font-extrabold text-lg">
-            Student Scholarship Fund:{" "}
+            Scholarship Fund:{" "}
           </span>
-          This assists economically needy students with financial support for
-          their hostel accommodation, enabling them to continue their stay
-          without financial constraints.
+          This provides financial assistance for students in need.
         </li>
         <br />
         <li>
           <span className=" font-extrabold text-lg">Building Fund: </span>
-          Contributions to the Building Fund are used to improve institutional
-          infrastructure.
+          Contributions to the Building Fund are utilised to improve building
+          infrastructure requirements.
         </li>
         <br />
         <li>
@@ -37,7 +35,7 @@ export default function ProgramTemplate() {
             Special Meal Sponsorship:
           </span>
           This sponsorship ensures that students receive special meals on
-          specific occasions.
+          specific occasions like festivals, donors' birthday or special events.
         </li>
         <br />
         <li>
@@ -45,12 +43,12 @@ export default function ProgramTemplate() {
           Donations to the Library Fund are utilized to procure new books,
           educational materials, and resources for the hostel library.
         </li>
-        <br />
+        <br /> 
         <li>
           <span className=" font-extrabold text-lg">Other Donations: </span>This
           category allows donors to contribute towards specific needs or
           purposes within the institution, such as equipment, extracurricular
-          activities, or other essential requirements.
+          activities and others.
         </li>
         <br />
 

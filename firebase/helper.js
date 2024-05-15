@@ -105,7 +105,7 @@ export const updateDataFromFirebase = async (data) => {
     console.log("Data updated successfully");
   } catch (error) {
     console.error("Error updating data:", error.message);
-    throw error;
+    // throw error;
   }
 };
 
@@ -141,7 +141,8 @@ export const UpdatePhoto = async () => {
         Historical: albumHistorical,
       } = albumData;
 
-
+      if (!HistoricalNew || !Jnana || !GalleryNew || !Facility)
+        return console.error("Error updating data");
       // { ******************************  Historical ******************************* *** }
 
       if (HistoricalNew) {
@@ -153,6 +154,7 @@ export const UpdatePhoto = async () => {
             imagesToAdd.push(image);
           }
         });
+
         albumHistorical.forEach((image) => {
           if (!imagesData?.includes(image)) {
             imagesToDelete.push(image);
@@ -166,26 +168,30 @@ export const UpdatePhoto = async () => {
         if (editHistoricalSnapshot.exists()) {
           updatedHistorical = editHistoricalSnapshot.val();
         }
-
-        imagesToAdd.forEach((image, index) => {
-          updatedHistorical[index] = image;
-        });
-
-        imagesToDelete.forEach((image) => {
-          for (const key in updatedHistorical) {
-            if (updatedHistorical[key] === image) {
-              delete updatedHistorical[key];
-              break;
-            }
+        if (imagesToAdd.length !== 0) {
+          imagesToAdd.forEach((image, index) => {
+            updatedHistorical[index] = image;
+          });
+          if (imagesToDelete.length !== 0) {
+            imagesToDelete.forEach((image) => {
+              for (const key in updatedHistorical) {
+                if (updatedHistorical[key] === image) {
+                  delete updatedHistorical[key];
+                  break;
+                }
+              }
+            });
           }
-        });
 
-        try {
-          await set(editHistoricalRef, updatedHistorical);
-          console.log("Historical data updated successfully");
-        } catch (error) {
-          console.error("Error updating Historical data:", error.message);
-          throw error;
+          try {
+            await set(editHistoricalRef, updatedHistorical);
+            console.log("Historical data updated successfully");
+          } catch (error) {
+            console.error("Error updating Historical data:", error.message);
+            // throw error;
+          }
+        }else{
+          console.log("Historical did not updated successfully");
         }
       }
 
@@ -213,28 +219,86 @@ export const UpdatePhoto = async () => {
         if (editJnanaSnapshot.exists()) {
           updatedJnana = editJnanaSnapshot.val();
         }
+        if (imagesToAdd.length !== 0) {
+          imagesToAdd.forEach((image, index) => {
+            updatedJnana[index] = image;
+          });
+          if (imagesToDelete.length !== 0) {
+            imagesToDelete.forEach((image) => {
+              for (const key in updatedJnana) {
+                if (updatedJnana[key] === image) {
+                  delete updatedJnana[key];
+                  break;
+                }
+              }
+            });
+          }
 
-        imagesToAdd.forEach((image, index) => {
-          updatedJnana[index] = image;
+          try {
+            await set(editJnanaRef, updatedJnana);
+            console.log("Jnana data updated successfully");
+          } catch (error) {
+            console.error("Error updating Jnana data:", error.message);
+            // throw error;
+          }
+        }else{
+          console.log("Jnana did not updated successfully");
+        }
+      }
+
+      // { ******************************  Facility ******************************* *** }
+
+      if (Facility) {
+        const imagesData = await GetImages(Facility);
+        console.log(imagesData)
+        console.log(albumFacility)
+        const imagesToAdd = [];
+        const imagesToDelete = [];
+        imagesData.forEach((image) => {
+          if (!albumFacility?.includes(image)) {
+            imagesToAdd.push(image);
+          }
         });
-
-        imagesToDelete.forEach((image) => {
-          for (const key in updatedJnana) {
-            if (updatedJnana[key] === image) {
-              delete updatedJnana[key];
-              break;
-            }
+        albumFacility.forEach((image) => {
+          if (!imagesData?.includes(image)) {
+            imagesToDelete.push(image);
           }
         });
 
-        try {
-          await set(editJnanaRef, updatedJnana);
-          console.log("Jnana data updated successfully");
-        } catch (error) {
-          console.error("Error updating Jnana data:", error.message);
-          throw error;
+        const editFacilityRef = ref(db, "english/Album/Facility");
+        const editFacilitySnapshot = await get(editFacilityRef);
+        let updatedFacility = {};
+
+        if (editFacilitySnapshot.exists()) {
+          updatedFacility = editFacilitySnapshot.val();
+        }
+        if (imagesToAdd.length !== 0) {
+          imagesToAdd.forEach((image, index) => {
+            updatedFacility[index] = image;
+          });
+          if (imagesToDelete.length !== 0) {
+            imagesToDelete.forEach((image) => {
+              for (const key in updatedFacility) {
+                if (updatedFacility[key] === image) {
+                  delete updatedFacility[key];
+                  break;
+                }
+              }
+            });
+          }
+
+          try {
+            await set(editFacilityRef, updatedFacility);
+            console.log("Facility data updated successfully");
+          } catch (error) {
+            console.error("Error updating Facility data:", error.message);
+            // throw error;
+          }
+        }else{
+          console.log("Facility did not updated successfully");
         }
       }
+
       // { ******************************  Gallery ******************************* *** }
 
       if (GalleryNew) {
@@ -259,72 +323,30 @@ export const UpdatePhoto = async () => {
         if (editGallerySnapshot.exists()) {
           updatedGallery = editGallerySnapshot.val();
         }
-
-        imagesToAdd.forEach((image, index) => {
-          updatedGallery[index] = image;
-        });
-
-        imagesToDelete.forEach((image) => {
-          for (const key in updatedGallery) {
-            if (updatedGallery[key] === image) {
-              delete updatedGallery[key];
-              break;
-            }
+        if (imagesToAdd.length !== 0) {
+          imagesToAdd.forEach((image, index) => {
+            updatedGallery[index] = image;
+          });
+          if (imagesToDelete.length !== 0) {
+            imagesToDelete.forEach((image) => {
+              for (const key in updatedGallery) {
+                if (updatedGallery[key] === image) {
+                  delete updatedGallery[key];
+                  break;
+                }
+              }
+            });
           }
-        });
 
-        try {
-          await set(editGalleryRef, updatedGallery);
-          console.log("Gallery data updated successfully");
-        } catch (error) {
-          console.error("Error updating Gallery data:", error.message);
-          throw error;
-        }
-      }
-      // { ******************************  Facility ******************************* *** }
-
-      if (Facility) {
-        const imagesData = await GetImages(Facility);
-        const imagesToAdd = [];
-        const imagesToDelete = [];
-        imagesData.forEach((image) => {
-          if (!albumFacility?.includes(image)) {
-            imagesToAdd.push(image);
+          try {
+            await set(editGalleryRef, updatedGallery);
+            console.log("Gallery data updated successfully");
+          } catch (error) {
+            console.error("Error updating Gallery data:", error.message);
+            // throw error;
           }
-        });
-        albumFacility.forEach((image) => {
-          if (!imagesData?.includes(image)) {
-            imagesToDelete.push(image);
-          }
-        });
-
-        const editFacilityRef = ref(db, "english/Album/Facility");
-        const editFacilitySnapshot = await get(editFacilityRef);
-        let updatedFacility = {};
-
-        if (editFacilitySnapshot.exists()) {
-          updatedFacility = editFacilitySnapshot.val();
-        }
-
-        imagesToAdd.forEach((image, index) => {
-          updatedFacility[index] = image;
-        });
-
-        imagesToDelete.forEach((image) => {
-          for (const key in updatedFacility) {
-            if (updatedFacility[key] === image) {
-              delete updatedFacility[key];
-              break;
-            }
-          }
-        });
-
-        try {
-          await set(editFacilityRef, updatedFacility);
-          console.log("Facility data updated successfully");
-        } catch (error) {
-          console.error("Error updating Facility data:", error.message);
-          throw error;
+        }else{
+          console.log("Gallery did not updated successfully");
         }
       }
     } else {

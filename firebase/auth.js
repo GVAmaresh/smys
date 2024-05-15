@@ -7,6 +7,6 @@ export const AuthLogIn = async (email, password) => {
       return userCredential.user;
     } catch (error) {
       console.error("Error logging in:", error.message);
-      throw error;
+      // throw error;
     }
   };

@@ -54,57 +54,43 @@ export default function FounderMember({
               <ul className="list-outside list-disc">
                 <div className="pt-1 font-extrabold text-lg"></div>
                 <li className="pt-1">
-                  Established in 1945 under the leadership of Sri Subodha
-                  Ramarayaru, the student hostel was founded to provide free
-                  accommodation for Brahmin students coming to Bangalore for
-                  higher education.
+                1944 - Discussion on the need for such a hostel at the Madhwa Yuva Sammelana.
+                  
                 </li>
                 <li className="pt-1">
-                  Over the years, it has grown into a facility that accommodates
-                  thousands of students, nurturing them into contributing
-                  members of society.Currently, the hostel provides free
-                  accommodation facilities to around 110 students.
+                1945 - Establishment of Sri Madhwa Yuvaka Sangha under the leadership of Late. Sri Subhodha Ramarayaru.
                 </li>
                 <li className="pt-1">
-                  The need for such a hostel was discussed at the Madhwa Youth
-                  Conference in 1944.
-                </li>
-                <li className="pt-1">
-                  The Sri Madhwa Yuva Sangha was formally established in 1945,
+                  1946 - Sri Madhwa Yuvaka Sangha was formally established in 1945,
                   with activities commencing in 1946.
                 </li>
 
                 <li className="pt-1">
-                  It was officially registered under the Mysore government in
-                  1948.
+                  1948 - Officially registered under Subregistrar of The Government of Mysore.
+                  
                 </li>
                 <li className="pt-1">
-                  The first constitution of the Sangha was drafted in 1950.
-                </li>
-
-                <li className="pt-1">
-                  The Satpantha Student Union was established in 1952.
-                </li>
-                <li className="pt-1">
-                  The Sri Madhwa Education and Charitable Trust was formed in
-                  1996.
+                  1950 - Final Draft of Byelaw of the Sangha.
                 </li>
 
                 <li className="pt-1">
-                  Major renovations were carried out in 2002, including the
-                  construction of the Golden Jubilee Auditorium.
+                  1952 - Establishment of Satpantha Student Union.
                 </li>
                 <li className="pt-1">
-                  The Bayalu Ranga Mandira( open auditorium) was inaugurated in
-                  2015.
+                  1996 -  Formation of Sri Madhwa Education and Charitable Trust.               </li>
+
+                <li className="pt-1">
+                  2004 - Major building renovation work were carried out.
                 </li>
                 <li className="pt-1">
-                  The Sangha continues to celebrate the Amritha Mahotsava in
-                  2021.
+                  2009 - The Bayalu Ranga Mandira( open-air auditorium) was inaugurated.
+                </li>
+                <li className="pt-1">
+                  2021 - The Sangha celebrated its Amritha Mahotsava - 75 years of establishment.
                 </li>
                 <div className="pt-3 font-medium">
-                  Over its seven decades of existence, the Sri Madhwa Yuvaka
-                  Sangha has focused on the spiritual, cultural, and educational
+                  Over its seven decades of existence, Sri Madhwa Yuvaka
+                  Sangha(R.) has focused on the spiritual, cultural, and educational
                   development of Brahmin youth.
                 </div>
               </ul>
