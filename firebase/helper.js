@@ -250,8 +250,6 @@ export const UpdatePhoto = async () => {
 
       if (Facility) {
         const imagesData = await GetImages(Facility);
-        console.log(imagesData)
-        console.log(albumFacility)
         const imagesToAdd = [];
         const imagesToDelete = [];
         imagesData.forEach((image) => {
