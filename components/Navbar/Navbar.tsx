@@ -77,14 +77,15 @@ function Navbar({ options }: { options: Array<string> }) {
             <Toolbar>
               {/* <AdbIcon  /> */}
               {/* <FiAlignLeft style={{ display: (window.innerWidth < 768) ? "none" : "flex", marginRight: 1 }} /> */}
-
-              <Image
-                className="hidden md:flex"
-                src="/images/logo2.png"
-                alt="hh"
-                height={50}
-                width={50}
-              />
+              <Link href="/">
+                <Image
+                  className="hidden md:flex"
+                  src="/images/logo2.png"
+                  alt="hh"
+                  height={50}
+                  width={50}
+                />
+              </Link>
               <Typography
                 variant="h6"
                 noWrap
@@ -92,7 +93,7 @@ function Navbar({ options }: { options: Array<string> }) {
                 href="#app-bar-with-responsive-menu"
                 sx={{
                   mr: 4,
-                  ml:4,
+                  ml: 4,
                   fontFamily: "monospace",
                   fontWeight: 700,
                   letterSpacing: ".3rem",
@@ -154,13 +155,15 @@ function Navbar({ options }: { options: Array<string> }) {
               </Box>
               {/* <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 0 }} /> */}
               {/* <FiAlignLeft style={{ display: (window.innerWidth < 768) ? "none" : "flex", marginRight: 1 }} />  */}
-              <Image
-                className="flex md:hidden"
-                src="/images/logo2.png"
-                alt="img"
-                height={40}
-                width={40}
-              />
+              <Link href="/">
+                <Image
+                  className="flex md:hidden"
+                  src="/images/logo2.png"
+                  alt="img"
+                  height={40}
+                  width={40}
+                />
+              </Link>
               <Typography
                 variant="h5"
                 noWrap
