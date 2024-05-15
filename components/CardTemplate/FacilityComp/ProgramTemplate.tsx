@@ -35,7 +35,7 @@ export default function ProgramTemplate() {
             Special Meal Sponsorship:
           </span>
           This sponsorship ensures that students receive special meals on
-          specific occasions like festivals, donors' birthday or special events.
+          specific occasions like festivals, donors birthday or special events.
         </li>
         <br />
         <li>
