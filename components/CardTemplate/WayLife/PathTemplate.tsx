@@ -50,7 +50,7 @@ export default function FounderMember({
         <Box sx={{ display: "flex", flexDirection: "column", flex: 1 }}>
           <CardContent>
             <div className="font-bold text-4xl">{name}</div>
-            <div className="font-small text-sm">
+            <div className="text-base font-medium">
               <ul className="list-outside list-disc">
                 <div className="pt-1 font-extrabold text-lg"></div>
                 <li className="pt-1">
@@ -61,8 +61,7 @@ export default function FounderMember({
                 1945 - Establishment of Sri Madhwa Yuvaka Sangha under the leadership of Late. Sri Subhodha Ramarayaru.
                 </li>
                 <li className="pt-1">
-                  1946 - Sri Madhwa Yuvaka Sangha was formally established in 1945,
-                  with activities commencing in 1946.
+                  1946 - Sangha started its activities.
                 </li>
 
                 <li className="pt-1">
@@ -74,16 +73,16 @@ export default function FounderMember({
                 </li>
 
                 <li className="pt-1">
-                  1952 - Establishment of Satpantha Student Union.
+                  1952 - Establishment of Satpantha Students Union.
                 </li>
                 <li className="pt-1">
                   1996 -  Formation of Sri Madhwa Education and Charitable Trust.               </li>
 
                 <li className="pt-1">
-                  2004 - Major building renovation work were carried out.
+                  2004 - Major building renovation works were carried out.
                 </li>
                 <li className="pt-1">
-                  2009 - The Bayalu Ranga Mandira( open-air auditorium) was inaugurated.
+                  2009 - The Bayalu Ranga Mandira ( open-air auditorium ) was inaugurated.
                 </li>
                 <li className="pt-1">
                   2021 - The Sangha celebrated its Amritha Mahotsava - 75 years of establishment.
