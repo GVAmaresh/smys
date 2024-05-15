@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function MainProps() {
   return (
     <>
-      <div className="mt-20 mb-32 flex justify-center sm:mt-4 md:mt-28 md:mb-40  ">
+      <div className="mt-20 mb-10 flex justify-center sm:mt-4 md:mt-28 md:mb-10  ">
         <Stack
           direction={{ xs: "column", sm: "column", md: "column", lg: "row" }}
           spacing={2}

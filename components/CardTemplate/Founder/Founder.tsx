@@ -25,7 +25,7 @@ export default function Founder({ founders }: FounderProps) {
     <div className="mt-20">
       <Heading text="Founders" />
       <div
-        className="m-10 sm:m-10 md:m-20 md:mt-10 md:mb-10 p-10 mt-10 mb-10 border-2 "
+        className="m-10 sm:m-10 md:m-20 md:mt-10 md:mb-10 p-10 mt-10 mb-10 border-2 font-medium text-lg "
         style={{
           borderBottomRightRadius: "50px",
           borderTopLeftRadius: "50px",

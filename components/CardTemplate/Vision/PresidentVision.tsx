@@ -68,7 +68,7 @@ export function PresidentVision({ data }: { data: Journey }) {
   return (
     <>
       <>
-        <div className="mt-10 sm:mt-10 md:mt-10 lg:mt-10 ">
+        <div className="mt-4 sm:mt-10 md:mt-10 lg:mt-4">
           <Heading text={"President's Vision"} />
           <div className="flex flex-col items-center">
             <PresidentTemplate
