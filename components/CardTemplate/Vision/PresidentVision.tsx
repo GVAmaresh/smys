@@ -72,7 +72,7 @@ export function PresidentVision({ data }: { data: Journey }) {
           <Heading text={"President's Vision"} />
           <div className="flex flex-col items-center">
             <PresidentTemplate
-              name={"-ಡಾ. ಎಂ ಆರ್ ವೆಂಕಟೇಶ್ ಪ್ರಸಾದ"}
+              name={"-ಡಾ. ಎಂ ಆರ್ ವಿ ಪ್ರಸಾದ"}
               designation={"ಗೌರವ ಅಧ್ಯಕ್ಷರು"}
               image={"/images/president.jpg"}
               description={
