@@ -171,7 +171,7 @@ function Navbar({ options }: { options: Array<string> }) {
                 href="#app-bar-with-responsive-menu"
                 sx={{
                   mr: 4,
-                  ml: 4,
+                  ml: 1,
                   display: { xs: "flex", md: "none" },
                   flexGrow: 1,
                   fontFamily: "monospace",
