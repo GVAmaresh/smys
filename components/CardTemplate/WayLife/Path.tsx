@@ -7,10 +7,16 @@ import { Journey } from "@/lib/types/Data";
 export default function Path({ data }: { data: Journey }) {
   return (
     <>
-        <div className="bg-gray-300 h-px  w-full mt-56"></div>
+      <div className="bg-gray-300 h-px  w-full mt-56"></div>
       <div className="mt-10 sm:mt-12  md:mt-10 lg:mt-10 text-xl font-semibold ">
         {/* <Heading text={"ನಡೆದು ಬಂದ ಹಾದಿ...."} isLine={false}/> */}
-        <Heading text={"Journey of SMYS...."} isLine={false}/>
+        <div className=" text-center font-bold text-2xl">
+          Admissions for 2024-25 has started
+        </div>
+        <div className=" text-center font-bold text-xl">
+          (Contact office for application.)
+        </div>
+        <Heading text={"Journey of SMYS...."} isLine={false} />
         <div className="flex flex-col items-center">
           <PathTemplate
             name={""}
