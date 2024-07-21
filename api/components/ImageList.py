@@ -1,15 +1,9 @@
-import gdown
-
-def list_files_in_google_drive_folder(folder_url):
-    try:
-        files = gdown.download_folder(url=folder_url, skip_download=True)
-        if files is None:
-            print("Failed to retrieve folder contents.")
-            return []
-        file_ids = []
-        for file in files:
-            file_ids.append(file.id)
-        return file_ids
-    except Exception as e:
-        print(f"An error occurred: {e}")
-        return []
+def list_files_in_folder(service, folder_id):
+    query = f"'{folder_id}' in parents and mimeType != 'application/vnd.google-apps.folder'"
+    results = service.files().list(q=query, pageSize=1000, fields="nextPageToken, files(id, name)").execute()
+    files = results.get('files', [])
+    while 'nextPageToken' in results:
+        page_token = results['nextPageToken']
+        results = service.files().list(q=query, pageSize=1000, fields="nextPageToken, files(id, name)", pageToken=page_token).execute()
+        files.extend(results.get('files', []))
+    return files
