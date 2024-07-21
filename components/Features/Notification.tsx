@@ -59,7 +59,7 @@ export default function Notification() {
           </div>
         </div>
         <div className="">
-          <div className="mt-3 w-1/3">
+          <div className="mt-3 w-72 md:w-1/2 lg:w-1/3">
             <TextField
               required
               id="filled-required"
@@ -71,7 +71,7 @@ export default function Notification() {
               variant="filled"
             />
           </div>
-          <div className="w-1/3 mt-3">
+          <div className="mt-3 w-72 md:w-1/2 lg:w-1/3">
             <TextField
               required
               fullWidth

@@ -11,7 +11,6 @@ import {
   GetGalleryPhoto,
   getHomePageEnglish,
 } from "@/firebase/helper";
-import { GetImages } from "@/lib/FetchDetails/Fetch";
 import { ImageConvert } from "@/lib/smys_details/Image_Conversion";
 import Loading from "@/components/Navbar/Loading";
 import Gallery from "@/app/gallery/page";
@@ -59,7 +58,6 @@ export default function GalleryGrp() {
       try {
         const group = data?.Gallery;
         if (group) {
-          // const datas = await GetImages(group);
           const datas = await GetGalleryPhoto();
           setNewData(datas?.Gallery);
         }

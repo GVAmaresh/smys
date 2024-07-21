@@ -5,7 +5,7 @@ import { ID_URL } from "../smys_details/ID_URL";
 //   ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api`
 //   : "http://localhost:3000/api";
 
-const URL = "https://hostel-backend-nwey.onrender.com/api"
+const URL = "https://smys-backend.onrender.com/api"
 // const URL = "http://localhost:3000/api";
 
 export const FetchDetails = async (): Promise<any> => {
@@ -63,7 +63,10 @@ export const GetImages = async (url: string): Promise<any> => {
         body: JSON.stringify({ url: url })
     });
     const data = await response.json();
-    return data.data;
+    console.log(data);
+    console.log(data?.data);
+    if (data) return data?.data
+    return data
   } catch (error) {
     console.error("Error:", error);
     return [];

@@ -1,6 +1,5 @@
 "use client";
 import { getEventPageEnglish, GetFacilityPhoto } from "@/firebase/helper";
-import { GetImages } from "@/lib/FetchDetails/Fetch";
 import Data from "@/lib/types/Data";
 import { useEffect, useState } from "react";
 import { Navbar } from "react-bootstrap";
@@ -22,7 +21,6 @@ export default function FacilityTemplate() {
     getEventPageEnglish()
       .then(async (data: any) => {
         setData(data);
-        // const datas = await GetImages(group1);
         const datas = await GetFacilityPhoto();
         setHistorical({ photo: datas?.Facility });
       })

@@ -4,7 +4,6 @@ import Event from "@/components/CardTemplate/Event/Event";
 import Heading from "@/components/CardTemplate/Font/Heading";
 import { useEffect, useState } from "react";
 import Data from "@/lib/types/Data";
-import { FetchDetails, GetImages } from "@/lib/FetchDetails/Fetch";
 import Link from "next/link";
 import {
   getEventPageEnglish,
@@ -50,11 +49,8 @@ export default function Events() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // const datas = await GetImages(group1);
         const datas1 = await GetHistoricalPhoto();
         setHistorical({ photo: datas1?.Historical });
-
-        // const datas = await GetImages(group2);
         const datas2 = await GetFacilityPhoto();
         setFacility({ photo: datas2?.Facility });
 

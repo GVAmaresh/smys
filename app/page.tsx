@@ -34,13 +34,13 @@ export default function Home() {
       });
   }, []);
 
-  useEffect(() => {
-    GetFacilityPhoto().then(data => {});
-  }, []);
+  // useEffect(() => {
+  //   GetFacilityPhoto().then(data => {});
+  // }, []);
 
-  useEffect(() => {
-    UpdatePhoto().then((data) => {});
-  }, []);
+  // useEffect(() => {
+  //   UpdatePhoto().then((data) => {});
+  // }, []);
 
   const [title, setTitle] = useState<string>("Fill the space");
   const [state, setState] = useState<boolean>(false)
