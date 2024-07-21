@@ -1,6 +1,6 @@
 "use client";
 import * as React from "react";
-import AppBar from "@mui/material/AppBar";
+import { AppBar } from "@mui/material";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
@@ -14,6 +14,7 @@ import AdbIcon from "@mui/icons-material/Adb";
 import { FiAlignLeft } from "react-icons/fi";
 import Link from "next/link";
 import Image from "next/image";
+import Alerts from "../Alert/Alert";
 
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
@@ -28,7 +29,7 @@ function Navbar({ options }: { options: Array<string> }) {
             : curr.toLowerCase() == "contact"
             ? "/#contact"
             : curr.toLowerCase()
-        }`,
+        }`
       };
     },
     options.length ? {} : { "": "/" }
@@ -69,8 +70,8 @@ function Navbar({ options }: { options: Array<string> }) {
               xs: "10%",
               md: "22%",
               backgroundColor: "white",
-              color: "black",
-            },
+              color: "black"
+            }
           }}
         >
           <Container maxWidth="xl">
@@ -99,7 +100,7 @@ function Navbar({ options }: { options: Array<string> }) {
                   letterSpacing: ".3rem",
                   color: "inherit",
                   textDecoration: "none",
-                  display: { xs: "none", md: "flex" },
+                  display: { xs: "none", md: "flex" }
                 }}
               >
                 SMYS
@@ -111,8 +112,8 @@ function Navbar({ options }: { options: Array<string> }) {
                   display: {
                     xs: "flex",
                     justifyContent: "flex-start",
-                    md: "none",
-                  },
+                    md: "none"
+                  }
                 }}
               >
                 <IconButton
@@ -131,17 +132,17 @@ function Navbar({ options }: { options: Array<string> }) {
                   anchorEl={anchorElNav}
                   anchorOrigin={{
                     vertical: "bottom",
-                    horizontal: "left",
+                    horizontal: "left"
                   }}
                   keepMounted
                   transformOrigin={{
                     vertical: "top",
-                    horizontal: "left",
+                    horizontal: "left"
                   }}
                   open={Boolean(anchorElNav)}
                   onClose={handleCloseNavMenu}
                   sx={{
-                    display: { xs: "flex", md: "none" },
+                    display: { xs: "flex", md: "none" }
                   }}
                 >
                   {Object.entries(pages).map(([key, value]) => (
@@ -178,7 +179,7 @@ function Navbar({ options }: { options: Array<string> }) {
                   fontWeight: 700,
                   letterSpacing: ".3rem",
                   color: "inherit",
-                  textDecoration: "none",
+                  textDecoration: "none"
                 }}
               >
                 SMYS
@@ -192,8 +193,8 @@ function Navbar({ options }: { options: Array<string> }) {
                     md: "flex",
                     justifyContent: "flex-end",
                     gap: "20px",
-                    marginRight: "10%",
-                  },
+                    marginRight: "10%"
+                  }
                 }}
               >
                 {Object.entries(pages).map(([key, value]) => (
@@ -213,12 +214,12 @@ function Navbar({ options }: { options: Array<string> }) {
                   anchorEl={anchorElUser}
                   anchorOrigin={{
                     vertical: "top",
-                    horizontal: "right",
+                    horizontal: "right"
                   }}
                   keepMounted
                   transformOrigin={{
                     vertical: "top",
-                    horizontal: "right",
+                    horizontal: "right"
                   }}
                   open={Boolean(anchorElUser)}
                   onClose={handleCloseUserMenu}

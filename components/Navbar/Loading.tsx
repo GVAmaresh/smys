@@ -1,9 +1,13 @@
 import Image from "next/image";
 // import loading from "@/components/Navbar/final_loading_gif.gif";
-import loading from "@/public/final_loading2.gif"
-import man from "@/public/images/man.jpg"
+import loading from "@/public/final_loading2.gif";
+import man from "@/public/images/man.jpg";
 
-export default function Loading() {
+export default function Loading({
+  loading = "/final_loading2.gif"
+}: {
+  loading?: string;
+}) {
   return (
     <>
       {/* <div className="">
@@ -19,9 +23,9 @@ export default function Loading() {
           />
         </div>
       </div> */}
-    <div className="flex justify-center items-center h-screen w-screen">
-      <Image src={loading} height={305} width={305} alt="" />
-    </div>
+      <div className="flex justify-center items-center h-screen w-screen">
+        <Image src={loading} height={305} width={305} alt="" />
+      </div>
     </>
   );
 }

@@ -401,3 +401,27 @@ export const GetHistoricalPhoto = async () => {
     alert("error");
   }
 };
+
+
+// { ******************************  Notification ******************************* *** }
+
+export const getNotification = async () => {
+  const dbRef = ref(db, "english/Notification");
+  const snapshot = await get(dbRef);
+  if (snapshot.exists()) {
+    return snapshot.val();
+  } else {
+    return null;
+  }
+}
+
+export const updateNotification = async (notification) => {
+  const dbRef = ref(db, "english/Notification");
+  try {
+    await set(dbRef, notification);
+    return { message: "Notification updated successfully", status: "success" };
+  } catch (error) {
+    console.error("Error updating notification:", error.message);
+    return { message: "Error updating notification", status: "fail" };
+  }
+}

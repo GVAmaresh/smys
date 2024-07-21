@@ -44,6 +44,11 @@ export interface SatpantaMember {
   phone?:string
 }
 
+export interface Notification{
+  title?:string;
+  information?: string;
+  state?:boolean
+}
 
 export interface Satpanta {
   [key: string]: SatpantaMember;
@@ -65,6 +70,7 @@ interface Data {
   Committe: { [key: string]: CommitteeMember };
   Founders: { [key: string]: Founder };
   Events: Event;
+  Notification: Notification
   Satpanta: Satpanta;
   Gallery: string;
   Intro: Intro;

@@ -1,3 +1,4 @@
+import Alerts from "@/components/Alert/Alert";
 import Link from "next/link";
 
 export default function CopyRight() {

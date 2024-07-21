@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getDatabase } from "firebase/database";
-import { getAuth } from "firebase/auth";
+import { getAuth, GoogleAuthProvider } from "firebase/auth";
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -17,16 +17,15 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 export const db = getDatabase(app);
+export 
 
 let analytics = null;
-export let auth = null;
+export let auth = getAuth(app);
+export const provider = new GoogleAuthProvider();
 
 if (typeof window !== "undefined") {
   const { getAnalytics } = require("firebase/analytics");
   analytics = getAnalytics(app);
-
-  const { getAuth } = require("firebase/auth");
-  auth = getAuth(app);
 }
 
 export const useFirebase = () => {

@@ -7,22 +7,24 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "SMYS",
   description: "SMSY Basavanagudi",
-  icons:{
-    icon:["/favicon.ico?v=4"],
-    apple:["apple-touch-icon.png?v=4"],
-    shortcut:["apple-touch-icon.png"]
+  icons: {
+    icon: ["/favicon.ico?v=4"],
+    apple: ["apple-touch-icon.png?v=4"],
+    shortcut: ["apple-touch-icon.png"]
   },
   manifest: "/site.webmanifest"
 };
 
 export default function RootLayout({
-  children,
+  children
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+      </body>
     </html>
   );
 }

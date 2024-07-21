@@ -5,6 +5,7 @@ import Heading from "../Font/Heading";
 
 import { CommitteeMember } from "@/lib/types/Data";
 import { ImageConvert } from "@/lib/smys_details/Image_Conversion";
+import Alerts from "@/components/Alert/Alert";
 function Committe(committe: { committe: { [key: string]: CommitteeMember } }) {
   return (
     <>
