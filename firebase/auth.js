@@ -17,10 +17,18 @@ export const getSignin = async () => {
         "Sign-up is not allowed. Please use an existing Google account."
       );
     }
-    if (user.metadata.creationTime === user.metadata.lastSignInTime) {
-      await deleteUser(user);
-      throw new Error("Sign-up is not allowed. Account has been deleted.");
-    }
+    console.log("Sign-in successful");
+  } catch (error) {
+    console.error("Sign-in failed:", error);
+    throw error;
+  }
+};
+
+export const getSignup = async () => {
+  try {
+    const result = await signInWithPopup(auth, provider);
+    const user = result.user;
+
     console.log("Sign-in successful");
   } catch (error) {
     console.error("Sign-in failed:", error);
