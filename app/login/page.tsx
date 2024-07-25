@@ -61,7 +61,7 @@ export default function Page() {
         </div>
       </div>
       <div className="" onClick={signIn}>
-        {/* <ContinueGoogle /> */}
+        <ContinueGoogle />
       </div>
 
       <Snackbar

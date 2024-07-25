@@ -10,11 +10,11 @@ export default function Page() {
     }
   
     return (
-      <div className="bg-black h-screen">
+      <div className="">
         {SignUP ? (
           <SignUP />
         ) : (
-          <div className="pt-32 font-extrabold text-slate-500 text-center text-xl md:text-3xl">
+          <div className="bg-black h-screen pt-32 font-extrabold text-slate-500 text-center text-xl md:text-3xl">
             This section is only for developers
           </div>
         )}
