@@ -5,7 +5,7 @@ import Image from "next/image";
 import { HiFingerPrint } from "react-icons/hi2";
 import ContinueGoogle from "./google";
 import { Snackbar, Alert } from "@mui/material";
-import { useRouter } from 'next/navigation';
+import { useRouter } from "next/navigation";
 
 export default function Page() {
   const [error, setError] = useState<string | null>(null);
@@ -14,11 +14,11 @@ export default function Page() {
   const signIn = async () => {
     try {
       await getSignin();
-      router.push('/features');
+      router.push("/features");
     } catch (error: any) {
       console.error("Login failed:", error);
       setError(error.message || "An unexpected error occurred");
-      setOpen(true); 
+      setOpen(true);
     }
   };
 
@@ -34,8 +34,8 @@ export default function Page() {
             src="/images/logo.jpg"
             alt="logo"
             className="w-32 h-28 md:w-40 md:h-32 lg:w-48 lg:h-40"
-            width={200} 
-            height={200} 
+            width={200}
+            height={200}
           />
         </div>
         <div className="text-center mt-10 text-4xl md:text-5xl lg:text-7xl font-extralight text-slate-500">
@@ -45,7 +45,7 @@ export default function Page() {
 
       <div className="flex justify-center mt-10 gap-3">
         <div className="">
-        <HiFingerPrint className="text-[40px] md:text-[60px] lg:text-[65px]" />
+          <HiFingerPrint className="text-[40px] md:text-[60px] lg:text-[65px]" />
         </div>
         <div className="font-medium text-slate-500 text-3xl md:text-5xl lg:text-4xl">
           Account Sign-In
@@ -61,21 +61,19 @@ export default function Page() {
         </div>
       </div>
       <div className="" onClick={signIn}>
-        <ContinueGoogle />
+        {/* <ContinueGoogle /> */}
       </div>
 
-
       <Snackbar
-        anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+        anchorOrigin={{ vertical: "top", horizontal: "center" }}
         open={open}
         autoHideDuration={6000}
         onClose={handleClose}
       >
-        <Alert onClose={handleClose} severity="error" sx={{ width: '100%' }}>
+        <Alert onClose={handleClose} severity="error" sx={{ width: "100%" }}>
           {error || "An unexpected error occurred"}
         </Alert>
       </Snackbar>
-
     </div>
   );
 }
