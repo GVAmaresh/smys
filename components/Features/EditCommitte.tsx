@@ -1,4 +1,4 @@
-import { getSatpantaDetails, updateSatpantaDetails } from "@/firebase/helper";
+import { getCommitteDetails, getSatpantaDetails, updateCommitteDetails, updateSatpantaDetails } from "@/firebase/helper";
 import { Button, TextField } from "@mui/material";
 import { useEffect, useState } from "react";
 import { FaPeopleGroup } from "react-icons/fa6";
@@ -12,7 +12,7 @@ interface EditSatpantha {
   position?: string;
 }
 
-export default function EditSatpantha() {
+export default function EditCommitte() {
   const [details, setDetails] = useState<EditSatpantha[] | null>(null);
   const [alertOpen, setAlertOpen] = useState(false);
 
@@ -54,7 +54,7 @@ export default function EditSatpantha() {
   useEffect(() => {
     const fetchDetails = async () => {
       try {
-        const details = await getSatpantaDetails();
+        const details = await getCommitteDetails();
         const dataArr = details.map((e: any) => ({
           name: e.name,
           position: e.position
@@ -76,7 +76,7 @@ export default function EditSatpantha() {
 
   const handleUpdate = () => {
     console.log("Updated details: ", details);
-    updateSatpantaDetails(details).then((data) => console.log(data));
+    updateCommitteDetails(details).then((data) => console.log(data));
     setAlertOpen(true);
     setTimeout(() => {
       setAlertOpen(false);
@@ -91,7 +91,7 @@ export default function EditSatpantha() {
             <div className="mt-1">
               <FaPeopleGroup />
             </div>
-            <div className="">Satpantha</div>
+            <div className="">Committe</div>
           </div>
         </div>
         <div className="">
@@ -148,8 +148,8 @@ export default function EditSatpantha() {
             vertical="top"
             horizontal="center"
             severity="success"
-            title="Satpantha"
-            information="Satpantha Members are updated"
+            title="Committe"
+            information="Committe Members are updated"
           />
         )}
       </div>

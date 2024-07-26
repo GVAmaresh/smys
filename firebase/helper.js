@@ -293,3 +293,26 @@ export const updateSatpantaDetails = async (satpantaDetails) => {
     return { message: "Error updating satpanta details", status: "fail" };
   }
 }
+
+// { ************************************  Committe Details ************************************ *** }
+
+export const getCommitteDetails = async () => {
+  const dbRef = ref(db, "english/Committe");
+  const snapshot = await get(dbRef);
+  if (snapshot.exists()) {
+    return snapshot.val();
+  } else {
+    return null;
+  }
+};
+
+export const updateCommitteDetails = async (satpantaDetails) => {
+  const dbRef = ref(db, "english/Committe");
+  try {
+    await set(dbRef, satpantaDetails);
+    return { message: "Committe details updated successfully", status: "success" };
+  } catch (error) {
+    console.error("Error updating Committe details:", error.message);
+    return { message: "Error updating Committe details", status: "fail" };
+  }
+}

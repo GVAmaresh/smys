@@ -1,5 +1,6 @@
 "use client";
 import Heading from "@/components/CardTemplate/Font/Heading";
+import EditCommitte from "@/components/Features/EditCommitte";
 import EditSatpantha from "@/components/Features/EditSatpantha";
 import Notification from "@/components/Features/Notification";
 import ReloadDrive from "@/components/Features/Reload_Drive";
@@ -40,6 +41,7 @@ export default function Features() {
         <Notification />
         <ReloadDrive/>
         < EditSatpantha/>
+        <EditCommitte/>
       </div>
     </div>
   );
