@@ -269,3 +269,27 @@ export const updateNotification = async (notification) => {
     return { message: "Error updating notification", status: "fail" };
   }
 };
+
+
+// { ************************************  Satpantha Details ************************************ *** }
+
+export const getSatpantaDetails = async () => {
+  const dbRef = ref(db, "english/Satpanta");
+  const snapshot = await get(dbRef);
+  if (snapshot.exists()) {
+    return snapshot.val();
+  } else {
+    return null;
+  }
+};
+
+export const updateSatpantaDetails = async (satpantaDetails) => {
+  const dbRef = ref(db, "english/Satpanta");
+  try {
+    await set(dbRef, satpantaDetails);
+    return { message: "Satpanta details updated successfully", status: "success" };
+  } catch (error) {
+    console.error("Error updating satpanta details:", error.message);
+    return { message: "Error updating satpanta details", status: "fail" };
+  }
+}

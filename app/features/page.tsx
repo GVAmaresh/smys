@@ -1,5 +1,6 @@
 "use client";
 import Heading from "@/components/CardTemplate/Font/Heading";
+import EditSatpantha from "@/components/Features/EditSatpantha";
 import Notification from "@/components/Features/Notification";
 import ReloadDrive from "@/components/Features/Reload_Drive";
 import Loading from "@/components/Navbar/Loading";
@@ -38,6 +39,7 @@ export default function Features() {
       <div className="ml-14 md:ml-28 lg:ml-52">
         <Notification />
         <ReloadDrive/>
+        < EditSatpantha/>
       </div>
     </div>
   );
