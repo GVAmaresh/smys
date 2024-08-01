@@ -29,9 +29,9 @@ export const getSignup = async () => {
     const result = await signInWithPopup(auth, provider);
     const user = result.user;
 
-    console.log("Sign-in successful");
+    console.log("Sign-up successful");
   } catch (error) {
-    console.error("Sign-in failed:", error);
+    console.error("Sign-up failed:", error);
     throw error;
   }
 };
@@ -40,7 +40,7 @@ export const getVerified = () => {
   return new Promise((resolve) => {
     const auth = getAuth();
     onAuthStateChanged(auth, (user) => {
-      if (user && user.metadata.creationTime !== user.metadata.lastSignInTime) {
+      if (user)  {
         resolve(true);
       } else {
         resolve(false);
