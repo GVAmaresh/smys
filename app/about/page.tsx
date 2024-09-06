@@ -2,7 +2,7 @@
 import Committe from "@/components/CardTemplate/Committe/Committe";
 import Event from "@/components/CardTemplate/Event/Event";
 import Founder from "@/components/CardTemplate/Founder/Founder";
-import Satpantha from "@/components/CardTemplate/Satpantha/Satpantha";
+// import Satpantha from "@/components/CardTemplate/Satpantha/Satpantha";
 import Navbar from "@/components/Navbar/Navbar";
 import { Suspense, useEffect, useState } from "react";
 import Data from "@/lib/types/Data";
@@ -72,9 +72,7 @@ function AboutTemplate() {
             <Committe committe={data.Committe} />
           </div>
           {/* <Event page={""} /> */}
-          <div id="satpanta" className="satpanta">
-            <Satpantha satpanta={data.Satpanta} />
-          </div>
+
           <div id="facility" className="facility">
             <FacilityTemplate />
           </div>
