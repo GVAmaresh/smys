@@ -20,14 +20,14 @@ export default function MainProps() {
               <PropsTemplate name="" image="/images/program.png" />
             </Link>
           </ListItem>
-          <ListItem>
+          {/* <ListItem>
             <Link href="/about?path=satpanta">
               <PropsTemplate
                 name=""
                 image="/images/satpantha.png"
               />
             </Link>
-          </ListItem>
+          </ListItem> */}
         </Stack>
         {/* <Grid container spacing={1}>
           <Grid xs={6}>

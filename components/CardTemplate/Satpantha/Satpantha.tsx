@@ -27,7 +27,7 @@ export default function Satpantha(satpanta: {
           <br /> For the academic year 2023-24, Satpantha Students Union
           comprises the following:-
         </div>
-        <Grid
+        {/* <Grid
           sx={{ flexGrow: 1 }}
           container
           spacing={2}
@@ -46,7 +46,7 @@ export default function Satpantha(satpanta: {
               ))}
             </Grid>
           </Grid>
-        </Grid>
+        </Grid> */}
       </div>
     </>
   );
