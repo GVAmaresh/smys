@@ -10,7 +10,7 @@ function Committe(committe: { committe: { [key: string]: CommitteeMember } }) {
   return (
     <>
       <div className="mt-20 ">
-        <Heading text="Executive Committee" />
+        <Heading text="Executive Committee 2024-2027" />
         <Grid
           sx={{ flexGrow: 1 }}
           container
