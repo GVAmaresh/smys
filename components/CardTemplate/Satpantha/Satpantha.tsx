@@ -24,8 +24,8 @@ export default function Satpantha(satpanta: {
           food, cultural activities, library management, internal management,
           and sports facilities.
           <br />
-          <br /> For the academic year 2023-24, Satpantha Students Union
-          comprises the following:-
+          {/* <br /> For the academic year 2023-24, Satpantha Students Union
+          comprises the following:- */}
         </div>
         {/* <Grid
           sx={{ flexGrow: 1 }}
