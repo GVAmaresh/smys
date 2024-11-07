@@ -18,8 +18,7 @@ export default function Satpantha(satpanta: {
           }}
         >
           Satpantha Students Union was established in 1952 to cultivate
-          leadership and self confidence qualities among the students of Sri
-          Madhwa Yuvaka Sangha. 
+          leadership and self confidence qualities among the students.
           <br />
           {/* <br /> For the academic year 2023-24, Satpantha Students Union
           comprises the following:- */}
