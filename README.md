@@ -135,4 +135,4 @@ Now you should be able to access the frontend on [http://localhost:3000](http://
 - **G V Amaresh**: [GVAmaresh ](https://github.com/GVAmaresh)
 
 ## License
-This project is licensed under the Apache-2.0 License - see the [LICENSE](https://github.com/GVAmaresh/smys-backend/blob/main/LICENSE) file for details.
+This project is licensed under the MIT License License - see the [LICENSE](https://github.com/GVAmaresh/smys/blob/main/LICENSE) file for details.
